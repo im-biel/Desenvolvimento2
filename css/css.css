@@ -8796,6 +8796,10 @@ rodapé .seção__título:antes {
                 visibilidade: oculto
             }
 
+            .web-stories{
+                
+            }
+
             .slick-vertical .slick-slide {
                 display: bloco;
                 altura: auto;
@@ -12737,7 +12741,7 @@ rodapé .seção__título:antes {
                     margin: 0
                 }
 
-                @ mídia (largura máxima: 767px) {
+                @media  (largura máxima: 767px) {
                     .section--realtime .moment-content p {
                         margem: 8px 0;
                         text-align: left
@@ -14392,7 +14396,7 @@ rodapé .seção__título:antes {
                     display: none
                 }
 
-                @ mídia (largura máxima: 767px) {
+                @media (largura máxima: 767px) {
                     .header__home-nav {
                         background-size: cover;
                         background-position: top;
@@ -15162,7 +15166,7 @@ rodapé .seção__título:antes {
                     border-top: 0
                 }
 
-                @ mídia (largura máxima: 991px) {
+                @media (largura máxima: 991px) {
                     .submenu__container .news-list {
                         -ms-flex-positivo: 4;
                         flex-grow: 4;

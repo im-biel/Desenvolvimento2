@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caixa Móvel na Largura Total</title>
+<title>Bore Arena</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 
 <style>
 
@@ -23,7 +24,7 @@
     color: #fff;
     padding: 0px;
     height: 120px;
-    position: fixed;
+    position: relative;
     top: 0; /* Alinhar a caixa ao topo */
     left: 0; /* Alinhar a caixa à esquerda */
     right: 0; /* Alinhar a caixa à direita */
@@ -37,7 +38,7 @@
     width: 100%; /* Largura total */
     height: auto; /* Altura automática */
     z-index: 0; /* Define um z-index menor para a caixa */
-    margin-top: 120px; /* Define a margem superior para criar um espaço entre o cabeçalho e o banner */
+    margin-top: 0px; /* Define a margem superior para criar um espaço entre o cabeçalho e o banner */
   }
 
   .logocentral {
@@ -183,7 +184,7 @@
     font-family:  Calibri, sans-serif;
     position: absolute; /* Define a posição absoluta para o texto */
     bottom:  0.521vw; /* Alinha o texto ao fundo da caixa */
-    left: 92.3vw; /* Alinha o texto à esquerda da caixa */
+    left: 90.7vw; /* Alinha o texto à esquerda da caixa */
     color: #fff; /* Cor do texto */
     transition: transform 0.2s ease; /* Adiciona uma transição suave ao movimento */
   }
@@ -232,6 +233,217 @@
     background-color: #000000;
     position: relative;
   }
+
+ .web-stories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .webstories__wrapper {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+    width: 200px; /* Reduzido o comprimento */
+    height: 300px; /* Reduzido a altura */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .webstories__wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  .webstories__wrapper img {
+    width: 100%;
+    height: 50%; /* Ajuste a altura das imagens conforme necessário */
+    object-fit: cover;
+  }
+
+  .webstories__text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    font-family: Calibri, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .web-stories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .webstories__wrapper {
+    background-color: #050505;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 130px; /* Adiciona margem entre os cards */
+  }
+
+  .webstories__wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  .webstories__wrapper img {
+    width: 200px;
+    height: 220px; /* Reduz a altura das imagens */
+    object-fit: cover;
+  }
+
+  .webstories__text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    font-family: Calibri, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .webstories__wrapper1 {
+    background-color: #050505;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+    width: 200px; /* Reduzido o comprimento */
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .webstories__wrapper1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  .webstories__wrapper1 img {
+    width: 100%;
+    height: 220px; /* Ajuste a altura das imagens conforme necessário */
+    object-fit: cover;
+  }
+
+  .webstories__text1 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    font-family: Calibri, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .webstories__wrapper2 {
+    background-color: #050505;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+    width: 200px; /* Reduzido o comprimento */
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 130px;
+  }
+
+  .webstories__wrapper2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  .webstories__wrapper2 img {
+    width: 100%;
+    height: 220px; /* Ajuste a altura das imagens conforme necessário */
+    object-fit: cover;
+  }
+
+  .webstories__text2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    font-family: Calibri, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .salas-disponiveis {
+    height: 100px auto;
+    top: -260px;
+    margin-top: 20px; /* Reduzi o margin-top para ajustar o espaçamento */
+    background-color: #ffffff;
+    position: relative;
+}
+
+.sala {
+    
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+.sala h3 {
+    margin-top: 0;
+}
+
+.sala p {
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
 
  
 
@@ -292,79 +504,100 @@
 </div>
 
 
-<div class="banner">
+
+  <div class="banner">
     <!-- Conteúdo do banner aqui -->
     <div class="banner-container">
-        <div id="bannerCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
-            <ol class="carousel-indicators">
-                <li data-target="#bannerCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#bannerCarousel" data-slide-to="1"></li>
-                <li data-target="#bannerCarousel" data-slide-to="2"></li>
-            </ol>
-        
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="#" data-toggle="tooltip" data-placement="top">
-                        <img src="/img/BANNER_1_SITE.png" alt="Banner 1" class="d-block w-100">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="#" data-toggle="tooltip" data-placement="top">
-                        <img src="/img/banner.jpg" alt="Banner 2" class="d-block w-100">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="" data-toggle="tooltip" data-placement="top">
-                        <img src="/img/banner.jpg" alt="Banner 3" class="d-block w-100">
-                    </a>
-                </div>
+        <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#bannerCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#bannerCarousel" data-slide-to="1"></li>
+            <li data-target="#bannerCarousel" data-slide-to="2"></li>
+        </ol>
+    
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#" data-toggle="tooltip" data-placement="top" data-interval="4000">
+                    <img src="/img/BANNER_1_SITE.png" alt="Banner 1" class="d-block w-100">
+                </a>
             </div>
-        
-            <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
+            <div class="carousel-item">
+                <a href="#" data-toggle="tooltip" data-placement="top" data-interval="5200">
+                    <img src="/img/bannergif.gif" alt="Banner 2" class="d-block w-100">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="" data-toggle="tooltip" data-placement="top" data-interval="4000">
+                    <img src="/img/banner.jpg" alt="Banner 3" class="d-block w-100">
+                </a>
+            </div>
+        </div>
+    
+        <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+
         </div>        
     </div>
 
     <section class="web-stories">
-      <div class="container">
-          <div class="row">
-              <div class="col-xs-12 webstories__wrapper">
-                  <ul class="webstories__list">
-                      
-                          
-                          <li class="webstories__card webstories__target storie--click" data-list-index="1" data-title="Jogos do Game Pass de Junho" data-storie="https://www.theenemy.com.br/webstories/jogos-do-game-pass-de-junho/">
-                          <div class="card__image">
-                              
-                              <img src="//cdn.ome.lt/qrtQSmtdl-gFTu1jnokFwDzPnOE=/224x312/smart/extras/webstories/6d9dfe86-9a13-463f-b971-95ea56ae01c2"/>
-                              
-                          </div>
-                          <p class="card__title">Quem Somos</p>
-                        </li>    
-                        
-                  </ul>
-                  </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 webstories__wrapper">
+                  <img src="/img/33a14dbfc3404062ad526859609e547b.png" alt="Web Story">
+                  <div class="webstories__text">QUEM SOMOS</div>
+                </div>
+                <div class="col-xs-12 webstories__wrapper1">
+                  <img src="/img/Pngtreerefresh_icon_graphic_design_template_4766732.png" alt="Web Story">
+                  <div class="webstories__text1">ATUALIZAÇÕES</div>
+                </div>
+                <div class="col-xs-12 webstories__wrapper2">
+                  <img src="/img/symbole-de-nouvelles-jaune.png" alt="Web Story">
+                  <div class="webstories__text2">NOTÍCIAS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="salas-disponiveis">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="sala">
+                  <h3>Nome da Sala 1</h3>
+                  <p>Descrição da sala...</p>
+                  <a href="#" class="btn btn-primary">Jogar</a>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="sala">
+                  <h3>Nome da Sala 2</h3>
+                  <p>Descrição da sala...</p>
+                  <a href="#" class="btn btn-primary">Jogar</a>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="sala">
+                  <h3>Nome da Sala 3</h3>
+                  <p>Descrição da sala...</p>
+                  <a href="#" class="btn btn-primary">Jogar</a>
               </div>
           </div>
       </div>
-  </section>
+  </div>
+</div>
+
   
 
 
 
-  <!-- Caixa abaixo do banner -->
-    <div class="salas-disponiveis">
-
-      <div>
-        <h1>Salas</h1>
-      </div>
-    </div>
-
+  
    
 
 
