@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caixa Móvel na Largura Total</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+  /* Estilos para o corpo */
+  body {
+    background-color: #ffffff; /* Cor de fundo do corpo */
+    margin: 0; /* Remova as margens padrão do corpo */
+    padding: 0; /* Remova o preenchimento padrão do corpo */
+    position: relative;
+    z-index: 2; /* Garante que o corpo fique acima da imagem */
+  }
+
+  /* Estilos para a caixa */
+  .caixa {
+    background-color: #070707;
+    color: #fff;
+    padding: 0px;
+    height: 120px;
+    position: fixed;
+    top: 0; /* Alinhar a caixa ao topo */
+    left: 0; /* Alinhar a caixa à esquerda */
+    right: 0; /* Alinhar a caixa à direita */
+    margin: auto; /* Centraliza horizontalmente */
+    z-index: 1; /* Define um z-index menor para a caixa */
+    
+  }
+
+   /* Estilos para a caixa do banner */
+   .banner {
+    width: 100%; /* Largura total */
+    height: auto; /* Altura automática */
+    z-index: 0; /* Define um z-index menor para a caixa */
+    margin-top: 120px; /* Define a margem superior para criar um espaço entre o cabeçalho e o banner */
+  }
+
+  .logocentral {
+    text-align: center;
+  }
+
+  .logocentral img {
+    width: 20%; /* Define a largura da imagem como 30% do tamanho da caixa */
+  }
+
+  .sejavip {
+    font-family:  Calibri, sans-serif;
+    position: absolute; /* Define a posição absoluta para o texto */
+    bottom: 0.521vw; /* Alinha o texto ao fundo da caixa */
+    left: 0.521vw; /* Alinha o texto à esquerda da caixa */
+    color: #fff; /* Cor do texto */
+    cursor: pointer; /* Cursor do mouse */
+    transition: background-color 0.5s ease; /* Transição suave */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+  }
+
+  .sejavip::after {
+    content: ''; /* Adiciona um conteúdo ao pseudo-elemento */
+    display: block; /* Torna o pseudo-elemento em bloco */
+    width: 0; /* Inicialmente, a largura da barra é 0 */
+    height: 2px; /* Altura da barra */
+    background-color: #fff; /* Cor da barra */
+    position: absolute; /* Posicionamento absoluto em relação ao link */
+    bottom: -4px; /* Posicionamento abaixo do texto */
+    left: 0; /* Alinha à esquerda */
+    transition: width 0.3s ease; /* Transição suave */
+  }
+
+  .sejavip:hover::after {
+    width: 100%; /* Largura da barra ao passar o mouse */
+  }
+
+
+  .salas {
+    font-family:  Calibri,  sans-serif;
+    position: absolute; /* Define a posição absoluta para o texto */
+    bottom: 0.521vw; /* Alinha o texto ao fundo da caixa */
+    left: 26.95vw; /* Alinha o texto à esquerda da caixa */
+    color: #fff; /* Cor do texto */
+    transition: transform 0.2s ease; /* Adiciona uma transição suave ao movimento */
+  }
+
+  .salas::after {
+    content: ''; /* Adiciona um conteúdo ao pseudo-elemento */
+    display: block; /* Torna o pseudo-elemento em bloco */
+    width: 0; /* Inicialmente, a largura da barra é 0 */
+    height: 2px; /* Altura da barra */
+    background-color: #fff; /* Cor da barra */
+    position: absolute; /* Posicionamento absoluto em relação ao link */
+    bottom: -4px; /* Posicionamento abaixo do texto */
+    left: 0; /* Alinha à esquerda */
+    transition: width 0.3s ease; /* Transição suave */
+  }
+
+  .salas:hover::after {
+    width: 100%; /* Largura da barra ao passar o mouse */
+  }
+
+
+  .temporadas {
+    font-family:  Calibri, sans-serif;
+    position: absolute; /* Define a posição absoluta para o texto */
+    bottom:  0.521vw; /* Alinha o texto ao fundo da caixa */
+    left: 38.5vw; /* Alinha o texto à esquerda da caixa */
+    color: #fff; /* Cor do texto */
+    transition: transform 0.2s ease; /* Adiciona uma transição suave ao movimento */
+  }
+
+  .temporadas::after {
+    content: ''; /* Adiciona um conteúdo ao pseudo-elemento */
+    display: block; /* Torna o pseudo-elemento em bloco */
+    width: 0; /* Inicialmente, a largura da barra é 0 */
+    height: 2px; /* Altura da barra */
+    background-color: #fff; /* Cor da barra */
+    position: absolute; /* Posicionamento absoluto em relação ao link */
+    bottom: -4px; /* Posicionamento abaixo do texto */
+    left: 0; /* Alinha à esquerda */
+    transition: width 0.3s ease; /* Transição suave */
+  }
+
+  .temporadas:hover::after {
+    width: 100%; /* Largura da barra ao passar o mouse */
+  }
+
+  .anuncios {
+    font-family:  Calibri, sans-serif;
+    position: absolute; /* Define a posição absoluta para o texto */
+    bottom:  0.521vw; /* Alinha o texto ao fundo da caixa */
+    left: 54.7vw; /* Alinha o texto à esquerda da caixa */
+    color: #fff; /* Cor do texto */
+    transition: transform 0.2s ease; /* Adiciona uma transição suave ao movimento */
+  }
+
+  .anuncios::after {
+    content: ''; /* Adiciona um conteúdo ao pseudo-elemento */
+    display: block; /* Torna o pseudo-elemento em bloco */
+    width: 0; /* Inicialmente, a largura da barra é 0 */
+    height: 2px; /* Altura da barra */
+    background-color: #fff; /* Cor da barra */
+    position: absolute; /* Posicionamento absoluto em relação ao link */
+    bottom: -4px; /* Posicionamento abaixo do texto */
+    left: 0; /* Alinha à esquerda */
+    transition: width 0.3s ease; /* Transição suave */
+  }
+
+  .anuncios:hover::after {
+    width: 100%; /* Largura da barra ao passar o mouse */
+  }
+
+
+  .atualizacoes {
+    font-family:  Calibri, sans-serif;
+    position: absolute; /* Define a posição absoluta para o texto */
+    bottom:  0.521vw; /* Alinha o texto ao fundo da caixa */
+    left: 65vw; /* Alinha o texto à esquerda da caixa */
+    color: #fff; /* Cor do texto */
+    transition: transform 0.2s ease; /* Adiciona uma transição suave ao movimento */
+  }
+
+  .atualizacoes::after {
+     content: ''; /* Adiciona um conteúdo ao pseudo-elemento */
+    display: block; /* Torna o pseudo-elemento em bloco */
+    width: 0; /* Inicialmente, a largura da barra é 0 */
+    height: 2px; /* Altura da barra */
+    background-color: #fff; /* Cor da barra */
+    position: absolute; /* Posicionamento absoluto em relação ao link */
+    bottom: -4px; /* Posicionamento abaixo do texto */
+    left: 0; /* Alinha à esquerda */
+    transition: width 0.3s ease; /* Transição suave */
+  }
+
+  .atualizacoes:hover::after {
+    width: 100%; /* Largura da barra ao passar o mouse */
+  }
+
+
+  .campeonatos {
+    font-family:  Calibri, sans-serif;
+    position: absolute; /* Define a posição absoluta para o texto */
+    bottom:  0.521vw; /* Alinha o texto ao fundo da caixa */
+    left: 92.3vw; /* Alinha o texto à esquerda da caixa */
+    color: #fff; /* Cor do texto */
+    transition: transform 0.2s ease; /* Adiciona uma transição suave ao movimento */
+  }
+
+  .campeonatos::after {
+    content: ''; /* Adiciona um conteúdo ao pseudo-elemento */
+    display: block; /* Torna o pseudo-elemento em bloco */
+    width: 0; /* Inicialmente, a largura da barra é 0 */
+    height: 2px; /* Altura da barra */
+    background-color: #fff; /* Cor da barra */
+    position: absolute; /* Posicionamento absoluto em relação ao link */
+    bottom: -4px; /* Posicionamento abaixo do texto */
+    left: 0; /* Alinha à esquerda */
+    transition: width 0.3s ease; /* Transição suave */
+  }
+
+  .campeonatos:hover::after {
+    width: 100%; /* Largura da barra ao passar o mouse */
+  }
+
+  .barra {
+    font-family:  Calibri, sans-serif;
+    position: absolute; /* Define a posição absoluta para o texto */
+    bottom: 0.521vw; /* Alinha o texto ao fundo da caixa */
+    left: 1118px; /* Alinha o texto à esquerda da caixa */
+    color: #fff; /* Cor do texto */
+    
+  }
+
+  .barra1 {
+    font-family:  Calibri, sans-serif;
+    position: absolute; /* Define a posição absoluta para o texto */
+    bottom:  0.521vw; /* Alinha o texto ao fundo da caixa */
+    left: 240px; /* Alinha o texto à esquerda da caixa */
+    color: #fff; /* Cor do texto */
+    transition: transform 0.2s ease; /* Adiciona uma transição suave ao movimento */
+  }
+
+  .salas-disponiveis {
+    height: auto;
+    top: -260px;
+    margin-top: 60px;
+    margin: 300px;
+    left: 0 auto;
+    right: 0 auto;
+    background-color: #000000;
+    position: relative;
+  }
+
+ 
+
+
+
+</style>
+</head>
+<body>
+
+<div id="caixa" class="logocentral caixa">
+  
+ <img src="/img/logo_site.png" alt=""> 
+
+    <div class="salas">     
+        
+        <div>NOSSAS SALAS</div> 
+                      
+    </div>
+
+    <div class="temporadas">     
+        
+        <div>TEMPORADAS</div> 
+                      
+    </div>
+
+    <div class="anuncios">     
+        
+        <div>ANÚNCIOS</div> 
+                      
+    </div>
+
+    <div class="atualizacoes">     
+        
+        <div>ATUALIZAÇÕES</div> 
+                      
+    </div>
+
+    <div class="campeonatos">     
+        
+      <div>CAMPEONATOS</div> 
+                    
+  </div>
+
+  <div class="barra">     
+        
+    <div>|</div> 
+                  
+</div>
+
+<div class="barra1">     
+        
+  <div>|</div> 
+                
+</div>
+
+  <div id="sejavip" class="sejavip" >SEJAVIP</div>
+</div>
+</div>
+
+
+<div class="banner">
+    <!-- Conteúdo do banner aqui -->
+    <div class="banner-container">
+        <div id="bannerCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <ol class="carousel-indicators">
+                <li data-target="#bannerCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#bannerCarousel" data-slide-to="1"></li>
+                <li data-target="#bannerCarousel" data-slide-to="2"></li>
+            </ol>
+        
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#" data-toggle="tooltip" data-placement="top">
+                        <img src="/img/BANNER_1_SITE.png" alt="Banner 1" class="d-block w-100">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" data-toggle="tooltip" data-placement="top">
+                        <img src="/img/banner.jpg" alt="Banner 2" class="d-block w-100">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="" data-toggle="tooltip" data-placement="top">
+                        <img src="/img/banner.jpg" alt="Banner 3" class="d-block w-100">
+                    </a>
+                </div>
+            </div>
+        
+            <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>        
+    </div>
+
+    <section class="web-stories">
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12 webstories__wrapper">
+                  <ul class="webstories__list">
+                      
+                          
+                          <li class="webstories__card webstories__target storie--click" data-list-index="1" data-title="Jogos do Game Pass de Junho" data-storie="https://www.theenemy.com.br/webstories/jogos-do-game-pass-de-junho/">
+                          <div class="card__image">
+                              
+                              <img src="//cdn.ome.lt/qrtQSmtdl-gFTu1jnokFwDzPnOE=/224x312/smart/extras/webstories/6d9dfe86-9a13-463f-b971-95ea56ae01c2"/>
+                              
+                          </div>
+                          <p class="card__title">Quem Somos</p>
+                        </li>    
+                        
+                  </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+
+
+  <!-- Caixa abaixo do banner -->
+    <div class="salas-disponiveis">
+
+      <div>
+        <h1>Salas</h1>
+      </div>
+    </div>
+
+   
+
+
+
+<!-- Adicionando Bootstrap JS (opcional, apenas se você precisar de funcionalidades JavaScript do Bootstrap) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
