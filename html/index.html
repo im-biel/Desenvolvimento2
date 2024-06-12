@@ -448,16 +448,19 @@
 
 .card__image {
   width: 100%;
-  height: 200px; /* Ajuste a altura conforme necessário */
-  background-color: #000; /* Cor de fundo */
+  height: 270px; /* Ajuste a altura conforme necessário */
+  background-image: url('/img/Gravando_2024-06-01_203542_1.gif'); /* Substitua 'gif_animado.gif' pelo nome do seu arquivo GIF */
+  background-size: cover; /* Faz com que o GIF se ajuste ao tamanho da div, mantendo sua proporção */
   position: relative;
-  margin: 10px; /* Adiciona uma margem ao redor da imagem */
+  
   overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
 }
 
+
+
 .card__image img {
   width: 100%;
-  height: 100%; /* Permite que a altura seja ajustada automaticamente para manter a proporção */
+  height: auto; /* Permite que a altura seja ajustada automaticamente para manter a proporção */
   object-fit: cover; /* Faz com que a imagem se ajuste à div mantendo a proporção */
 }
 
@@ -512,9 +515,6 @@
 .card__content__sublist__item {
   margin-bottom: 5px;
 }
-
-
-
 
 
 </style>
@@ -637,8 +637,8 @@
   <div class="card card--horizontal card--featured card--text-big">
     <div class="card__wrapper">
       <!-- Parte da imagem -->
-      <div class="card__image" style="background-image: url(/img/Gravando_2024-06-01_203542_1.gif);">
-        <a class="card__image__anchor  analytics-featured" href="" style="background-image: url(/img/Gravando_2024-06-01_203542_1.gif);" data-featured-index="1"></a>
+      <div class="card__image">
+        <a class="card__image__anchor  analytics-featured" href=""  data-featured-index="1"></a>
         <div class="card__image__category">
           <span class="card__image__category__name">Salas Disponíveis</span>
           <span class="ico--video card__image__category__ico"></span>
