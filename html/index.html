@@ -7,6 +7,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
 
+
 <style>
 
   /* Estilos para o corpo */
@@ -17,6 +18,33 @@
     position: relative;
     z-index: 2; /* Garante que o corpo fique acima da imagem */
   }
+
+  /* Estilo para a barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+}
+
+/* Estilo para a alça da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Cor da alça */
+  border-radius: 5px; /* Raio da borda da alça */
+}
+
+/* Estilo para a alça da barra de rolagem quando hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Cor da alça ao passar o mouse */
+}
+
+/* Estilo para a faixa de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Cor da faixa de rolagem */
+}
+
+/* Estilo para a faixa de rolagem quando hover */
+::-webkit-scrollbar-track:hover {
+  background-color: #ddd; /* Cor da faixa de rolagem ao passar o mouse */
+}
+
 
   /* Estilos para a caixa */
   .caixa {
@@ -402,50 +430,90 @@
     white-space: nowrap;
   }
 
-  .salas-disponiveis {
-    height: 100px auto;
-    top: -260px;
-    margin-top: 20px; /* Reduzi o margin-top para ajustar o espaçamento */
-    background-color: #ffffff;
-    position: relative;
-}
-
-.sala {
-    
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-
-.sala h3 {
-    margin-top: 0;
-}
-
-.sala p {
-    margin-bottom: 15px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 8px 20px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-
-
  
+
+/* Estilo para o cartão */
+.card {
+  transform: scale(0.6); /* Reduz o tamanho em 20% */
+  top: 5px;
+  width: 600px; /* Defina a largura desejada */
+  height: 400px;
+  margin: 0 auto; /* Centralize horizontalmente */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.card__image {
+  width: 100%;
+  height: 200px; /* Ajuste a altura conforme necessário */
+  background-color: #000; /* Cor de fundo */
+  position: relative;
+  margin: 10px; /* Adiciona uma margem ao redor da imagem */
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%; /* Permite que a altura seja ajustada automaticamente para manter a proporção */
+  object-fit: cover; /* Faz com que a imagem se ajuste à div mantendo a proporção */
+}
+
+
+
+/* Estilo para a categoria da imagem */
+.card__image__category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background-color: #ff0000; /* Cor da categoria */
+  color: #fff; /* Cor do texto */
+  font-size: 0.8em;
+}
+
+/* Estilo para o ícone de vídeo */
+.ico--video {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.8em;
+  color: #fff; /* Cor do ícone */
+}
+
+/* Estilo para a parte do texto */
+.card__content {
+  padding: 20px;
+}
+
+/* Estilo para o título do cartão */
+.card__content__title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Estilo para a descrição do cartão */
+.card__content__description {
+  color: #666;
+}
+
+/* Estilo para a lista de links relacionados */
+.card__content__sublist {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilo para os itens da lista de links relacionados */
+.card__content__sublist__item {
+  margin-bottom: 5px;
+}
+
+
 
 
 
@@ -565,35 +633,35 @@
     </section>
 </div>
 
-<!-- <div class="salas-disponiveis">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-4">
-              <div class="sala">
-                  <h3>Nome da Sala 1</h3>
-                  <p>Descrição da sala...</p>
-                  <a href="#" class="btn btn-primary">Jogar</a>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="sala">
-                  <h3>Nome da Sala 2</h3>
-                  <p>Descrição da sala...</p>
-                  <a href="#" class="btn btn-primary">Jogar</a>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="sala">
-                  <h3>Nome da Sala 3</h3>
-                  <p>Descrição da sala...</p>
-                  <a href="#" class="btn btn-primary">Jogar</a>
-              </div>
-          </div>
+
+  <div class="card card--horizontal card--featured card--text-big">
+    <div class="card__wrapper">
+      <!-- Parte da imagem -->
+      <div class="card__image" style="background-image: url(/img/Gravando_2024-06-01_203542_1.gif);">
+        <a class="card__image__anchor  analytics-featured" href="" style="background-image: url(/img/Gravando_2024-06-01_203542_1.gif);" data-featured-index="1"></a>
+        <div class="card__image__category">
+          <span class="card__image__category__name">Salas Disponíveis</span>
+          <span class="ico--video card__image__category__ico"></span>
+        </div>
       </div>
+      <div class="text-center">
+      <!-- Parte do texto -->
+      <div class="card__content card__content--background-orange">
+        <div class="card__content__wrapper">
+          <a href="" class="card__content__title  analytics-featured" data-featured-index="1">🩸 BORE ARENE 🩸 | X3 | FUTSAL</a>
+          <p class="card__content__description"><a href=""></a> </p>
+          <ul class="card__content__sublist">
+            <li class="card__content__sublist__item"><a href=""></a></li>
+            <li class="card__content__sublist__item"><a href=""></a></li>
+            <li class="card__content__sublist__item"><a href=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-   -->
+  
 
 
 
