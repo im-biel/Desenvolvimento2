@@ -1,14 +1,122 @@
-/* @media screen and (max-width: 1200px) {
+ @media screen and (max-width: 1245px) {
     
     /* Cabeçalho */
-    /* .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
+     .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
         display: none;
     }
     .caixa {
-        height: 43px;
-    } */
+        height: 110px;
+    } 
+    
+    /* Banner */
+    .carousel-indicators{
+        bottom: -16px;
+    }
 
-    /* Banner 
+    /* Cards */
 
 
-} */
+} 
+
+@media screen and (max-width: 1199px) {
+     .webstories__wrapper {
+        width: 200px;
+        height: 240px;
+        margin: 0 90px;
+    }
+
+    .webstories__wrapper1 {
+        width: 200px;
+        height: 240px;
+    }
+
+    .webstories__wrapper2 {
+        width: 200px;
+        height: 240px;
+        margin: 0 90px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .webstories__wrapper {
+       width: 200px;
+       height: 240px;
+       margin: 0 30px;
+   }
+
+   .webstories__wrapper1 {
+       width: 200px;
+       height: 240px;
+   }
+
+   .webstories__wrapper2 {
+       width: 200px;
+       height: 240px;
+       margin: 0 30px;
+   }
+}
+
+
+@media screen and (max-width: 967px) {
+    .caixa {
+        height: 85px;
+    } 
+
+    .webstories__wrapper {
+        width: 200px;
+        height: 240px;
+        margin: 0 30px;
+    }
+
+    .webstories__wrapper1 {
+        width: 200px;
+        height: 240px;
+    }
+
+    .webstories__wrapper2 {
+        width: 200px;
+        height: 240px;
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .webstories__wrapper {
+        top: -20px;
+        width: 200px;
+        height: 240px;
+        margin: 0 150px;
+    }
+
+    .webstories__wrapper1 {
+        
+        width: 200px;
+        height: 240px;
+        margin: 0 150px;
+    }
+
+    .webstories__wrapper2 {
+        top: 15px;
+        width: 200px;
+        height: 240px;
+        margin: 0 150px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .caixa {
+        height: 40px;
+    } 
+}
+
+@media screen and (max-width: 390px){
+
+}
+
+@media screen and (max-width: 390px) {
+    .caixa {
+        height: 40px;
+    } 
+
+}
+
