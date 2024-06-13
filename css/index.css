@@ -476,23 +476,23 @@ body {
      .webstories__wrapper {
         text-align: center;
         align-items: center;
-        width: 90vw; /* Ajustado para largura relativa */
-        height: 29vh; /* Ajustado para altura relativa */
+        width: 60vw; /* Ajustado para largura relativa */
+        height: 33.7vh; /* Ajustado para altura relativa */
         margin: 0 auto; /* Centraliza horizontalmente */
     }
     .webstories__wrapper1 {
         text-align: center;
         align-items: center;
-        width: 90vw; /* Ajustado para largura relativa */
-        height: 33vh; /* Ajustado para altura relativa */
+        width: 60vw; /* Ajustado para largura relativa */
+        height: 35vh; /* Ajustado para altura relativa */
         top: 3.13vh; /* Ajustado para posição relativa ao topo */
         margin: 0 auto; /* Centraliza horizontalmente */
     }
     .webstories__wrapper2 {
         text-align: center;
         align-items: center;
-        width: 90vw; /* Ajustado para largura relativa */
-        height: 32vh; /* Ajustado para altura relativa */
+        width: 60vw; /* Ajustado para largura relativa */
+        height: 35vh; /* Ajustado para altura relativa */
         top: 6.25vh; /* Ajustado para posição relativa ao topo */
         margin: 0 auto; /* Centraliza horizontalmente */
     }
