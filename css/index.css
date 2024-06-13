@@ -495,7 +495,7 @@ body {
         
     }
     .card {
-        left: -20vw; /* Anteriormente -66px */
+        left: -30vw; /* Anteriormente -66px */
     }
     .imgstories {
         transform: scale(0.6);
