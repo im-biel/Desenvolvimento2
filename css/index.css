@@ -107,16 +107,19 @@
     .caixa {
         height: 40px;
     } 
+
+    .row {
+        flex-direction: column;
+    }
+
+    .card {
+        left: -45px;
+    }
 }
 
 @media screen and (max-width: 390px){
 
 }
 
-@media screen and (max-width: 390px) {
-    .caixa {
-        height: 40px;
-    } 
 
-}
 
