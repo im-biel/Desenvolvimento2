@@ -379,6 +379,33 @@ body {
     white-space: nowrap;
   }
 
+    /* Estilo personalizado para a classe season-card-body */
+    .season-card-body {
+      background-color: #f8f9fa; /* Cor de fundo */
+      border: 1px solid #dee2e6; /* Borda */
+      border-radius: 5px; /* Borda arredondada */
+      padding: 15px; /* Espaçamento interno */
+    }
+
+    .season-card-body h5 {
+      font-size: 1.25rem; /* Tamanho da fonte do título */
+      margin-bottom: 10px; /* Espaçamento inferior do título */
+    }
+
+    .season-card-body ul {
+      list-style-type: none; /* Remover marcadores da lista */
+      padding: 0; /* Remover espaçamento interno da lista */
+      margin-top: 0; /* Remover espaçamento superior da lista */
+    }
+
+    .season-card-body ul li {
+      margin-bottom: 5px; /* Espaçamento inferior dos itens da lista */
+    }
+
+    .season-card-body ul li strong {
+      font-weight: bold; /* Texto em negrito para os rótulos */
+      margin-right: 10px; /* Espaçamento à direita dos rótulos */
+    }
  
 
 /* Estilo para o cartão */
@@ -464,6 +491,76 @@ body {
 .card__content__sublist__item {
   margin-bottom: 5px;
 }
+
+.seasons {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+}
+
+.season-card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.season-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.season-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.season-card ul li {
+  margin-bottom: 8px;
+}
+
+  /* Estilos personalizados */
+  .season-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .season-card h3 {
+    margin-top: 0;
+  }
+  .season-form {
+    margin-bottom: 20px;
+  }
+
+  .season-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .season-cards-row .col-md-4 {
+    flex: 0 0 calc(33.3333% - 20px);
+    max-width: calc(33.3333% - 20px);
+  }
+  
+  @media (max-width: 768px) {
+    .season-cards-row .col-md-4 {
+      flex: 0 0 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .season-cards-row .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+    
+
 
 
 @media screen and (max-width: 375px) {
