@@ -178,16 +178,20 @@
               <option value="partidasJogadas">Partidas jogadas</option>
             </select>
           </div>
-          <div class="col-md-3 mb-3" style="bottom: -31px;">
+          <div class="col-md-3 mb-3">
             <button type="submit" class="btn btn-primary btn-block">Filtrar</button>
           </div>
         </div>
       </form>
-
-      <div id="seasonCards" class="season-cards-row">
+  
+      <div id="seasonCards" class="row">
         <!-- Aqui serão adicionados os cards dinamicamente -->
       </div>
+    </div>
 
+      <div id="seasonCards" class="row">
+        <!-- Aqui serão adicionados os cards dinamicamente -->
+      </div>
     </div>
 
 
@@ -205,54 +209,87 @@
           month: 1,
           year: 2023,
           title: 'Temporada 1',
-          jogador: 'Kristofer',
-          gols: 18,
-          assistencias: 20,
-          jogosSemSofrerGols: 7,
-          vitorias: 9,
-          partidasJogadas: 11
+          jogadores: [
+            { nome: 'Kristofer', gols: 18 },
+            { nome: 'Maria', gols: 15 },
+            { nome: 'João', gols: 12 },
+            // Adicione mais jogadores conforme necessário
+          ]
         },
-
+        // Adicione mais temporadas conforme necessário
       ];
 
-      // Função para gerar os cards de temporadas com base nos dados filtrados
-      function generateSeasonCards(month, year, category) {
-        // Filtrar as temporadas baseadas no mês, ano e categoria selecionados
-        let filteredSeasons = seasonsData;
 
-        if (month !== 0) {
-          filteredSeasons = filteredSeasons.filter(season => season.month === month);
-        }
-        if (year !== 0) {
-          filteredSeasons = filteredSeasons.filter(season => season.year === year);
-        }
+        // Função para gerar os cards de temporadas com base nos dados filtrados
+function generateSeasonCards(month, year, category) {
+  // Filtrar as temporadas baseadas no mês, ano e categoria selecionados
+  let filteredSeasons = seasonsData;
 
-        // Selecionar o contêiner onde os cards serão inseridos
-        const seasonCardsContainer = document.getElementById('seasonCards');
-        seasonCardsContainer.innerHTML = ''; // Limpar conteúdo existente
+  if (month !== 0) {
+    filteredSeasons = filteredSeasons.filter(season => season.month === month);
+  }
+  if (year !== 0) {
+    filteredSeasons = filteredSeasons.filter(season => season.year === year);
+  }
 
-        // Iterar sobre as temporadas filtradas e criar os cards dinamicamente
-        filteredSeasons.forEach(season => {
-          let categoryValue = season[category]; // Valor da categoria selecionada
+  // Selecionar o contêiner onde os cards serão inseridos
+  const seasonCardsContainer = document.getElementById('seasonCards');
+  seasonCardsContainer.innerHTML = ''; // Limpar conteúdo existente
 
-          const cardHtml = `
-      <div class="col-md-6 mb-4">
+  // Iterar sobre as temporadas filtradas e criar os cards dinamicamente
+  filteredSeasons.forEach(season => {
+    const cardHtml = `
+      <div class="col-md-4 mb-4">
         <div class="card card-season">
           <div class="card-body">
-            <h5 class="card-season-title">${season.title}</h5>
-            <p class="card-season-text">${season.jogador} | ${getOrdinalNumber(category)}: ${categoryValue}</p>
+            <h5 class="card-title">${season.title}</h5>
+            ${season.jogadores.map((jogador, index) => `
+              <p class="card-text">${index + 1}º | ${jogador.nome}: ${getCategoryValue(jogador, category)}</p>
+            `).join('')}
           </div>
         </div>
       </div>
     `;
-          seasonCardsContainer.insertAdjacentHTML('beforeend', cardHtml);
-        });
+    seasonCardsContainer.insertAdjacentHTML('beforeend', cardHtml);
+  });
 
-        // Se não houver temporadas para o filtro selecionado, exibir mensagem
-        if (filteredSeasons.length === 0) {
-          seasonCardsContainer.innerHTML = '<p class="text-center">Nenhuma temporada encontrada para este filtro.</p>';
-        }
-      }
+  // Se não houver temporadas para o filtro selecionado, exibir mensagem
+  if (filteredSeasons.length === 0) {
+    seasonCardsContainer.innerHTML = '<p class="text-center">Nenhuma temporada encontrada para este filtro.</p>';
+  }
+}
+
+// Função para obter o valor da categoria específica (gols, assistências, etc.) de um jogador
+function getCategoryValue(jogador, category) {
+  switch (category) {
+    case 'gols':
+      return jogador.gols;
+    case 'assistencias':
+      return jogador.assistencias;
+    case 'jogosSemSofrerGols':
+      return jogador.jogosSemSofrerGols;
+    case 'vitorias':
+      return jogador.vitorias;
+    case 'partidasJogadas':
+      return jogador.partidasJogadas;
+    default:
+      return '';
+  }
+}
+
+// Evento para atualizar os cards de temporadas quando o formulário é enviado
+document.getElementById('seasonForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Evitar o envio padrão do formulário
+
+  const selectedMonth = parseInt(document.getElementById('selectMonth').value);
+  const selectedYear = parseInt(document.getElementById('selectYear').value);
+  const selectedCategory = document.getElementById('selectCategory').value;
+
+  generateSeasonCards(selectedMonth, selectedYear, selectedCategory);
+});
+
+// Inicialmente, gerar os cards com todos os dados
+generateSeasonCards(0, 0, 'gols');
 
 
 
