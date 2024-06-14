@@ -136,121 +136,128 @@
 
 
 
-<section class="seasons">
-  <div class="container">
-    <h2>Temporadas</h2>
-
-    <!-- Formulário de seleção de mês e ano -->
-    <form id="seasonForm" class="season-form">
-      <div class="form-row">
-        <div class="col">
-          <select id="selectMonth" class="form-control">
-            <option value="1">Janeiro</option>
-            <option value="2">Fevereiro</option>
-            <option value="3">Março</option>
-            <option value="4">Abril</option>
-            <option value="5">Maio</option>
-            <option value="6">Junho</option>
-            <option value="7">Julho</option>
-            <option value="8">Agosto</option>
-            <option value="9">Setembro</option>
-            <option value="10">Outubro</option>
-            <option value="11">Novembro</option>
-            <option value="12">Dezembro</option>
-          </select>
+    <div class="container mt-5">
+      <h2>Selecione o mês, ano e categoria:</h2>
+      <form id="seasonForm" class="mb-3">
+        <div class="form-row">
+          <div class="col-md-3 mb-3">
+            <label for="selectMonth">Mês:</label>
+            <select id="selectMonth" class="form-control">
+              <option value="0">Todos os meses</option>
+              <option value="1">Janeiro</option>
+              <option value="2">Fevereiro</option>
+              <option value="3">Março</option>
+              <option value="4">Abril</option>
+              <option value="5">Maio</option>
+              <option value="6">Junho</option>
+              <option value="7">Julho</option>
+              <option value="8">Agosto</option>
+              <option value="9">Setembro</option>
+              <option value="10">Outubro</option>
+              <option value="11">Novembro</option>
+              <option value="12">Dezembro</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="selectYear">Ano:</label>
+            <select id="selectYear" class="form-control">
+              <option value="0">Todos os anos</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <!-- Adicione mais anos conforme necessário -->
+            </select>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="selectCategory">Categoria:</label>
+            <select id="selectCategory" class="form-control">
+              <option value="gols">Gols</option>
+              <option value="assistencias">Assistências</option>
+              <option value="jogosSemSofrerGols">Partidas sem sofrer gols</option>
+              <option value="vitorias">Vitórias</option>
+              <option value="partidasJogadas">Partidas jogadas</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3" style="bottom: -31px;">
+            <button type="submit" class="btn btn-primary btn-block">Filtrar</button>
+          </div>
         </div>
-        <div class="col">
-          <select id="selectYear" class="form-control">
-            <option value="2023">2023</option>
-            <option value="2022">2022</option>
-            <option value="2021">2021</option>
-            <!-- Adicione mais anos conforme necessário -->
-          </select>
+      </form>
+
+      <div id="seasonCards" class="season-cards-row">
+        <!-- Aqui serão adicionados os cards dinamicamente -->
+      </div>
+
+    </div>
+
+
+
+    <!-- Adicionando Bootstrap JS (opcional, apenas se você precisar de funcionalidades JavaScript do Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+      // Dados simulados das temporadas (exemplo)
+      const seasonsData = [
+        {
+          month: 1,
+          year: 2023,
+          title: 'Temporada 1',
+          jogador: 'Kristofer',
+          gols: 18,
+          assistencias: 20,
+          jogosSemSofrerGols: 7,
+          vitorias: 9,
+          partidasJogadas: 11
+        },
+
+      ];
+
+      // Função para gerar os cards de temporadas com base nos dados filtrados
+      function generateSeasonCards(month, year, category) {
+        // Filtrar as temporadas baseadas no mês, ano e categoria selecionados
+        let filteredSeasons = seasonsData;
+
+        if (month !== 0) {
+          filteredSeasons = filteredSeasons.filter(season => season.month === month);
+        }
+        if (year !== 0) {
+          filteredSeasons = filteredSeasons.filter(season => season.year === year);
+        }
+
+        // Selecionar o contêiner onde os cards serão inseridos
+        const seasonCardsContainer = document.getElementById('seasonCards');
+        seasonCardsContainer.innerHTML = ''; // Limpar conteúdo existente
+
+        // Iterar sobre as temporadas filtradas e criar os cards dinamicamente
+        filteredSeasons.forEach(season => {
+          let categoryValue = season[category]; // Valor da categoria selecionada
+
+          const cardHtml = `
+      <div class="col-md-6 mb-4">
+        <div class="card card-season">
+          <div class="card-body">
+            <h5 class="card-season-title">${season.title}</h5>
+            <p class="card-season-text">${season.jogador} | ${getOrdinalNumber(category)}: ${categoryValue}</p>
+          </div>
         </div>
       </div>
-    </form>
+    `;
+          seasonCardsContainer.insertAdjacentHTML('beforeend', cardHtml);
+        });
 
-    <!-- Cards de temporadas (preenchidos dinamicamente) -->
-    <div id="seasonCards" class="season-cards-row">
-      <!-- Aqui serão adicionados os cards dinamicamente -->
-    </div>
-  </div>
-</section>
+        // Se não houver temporadas para o filtro selecionado, exibir mensagem
+        if (filteredSeasons.length === 0) {
+          seasonCardsContainer.innerHTML = '<p class="text-center">Nenhuma temporada encontrada para este filtro.</p>';
+        }
+      }
 
-    
-    
-      <!-- Adicionando Bootstrap JS (opcional, apenas se você precisar de funcionalidades JavaScript do Bootstrap) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-    
-  <script>
-    // Dados simulados das temporadas (exemplo)
-const seasonsData = [
-  { month: 1, year: 2023, title: 'Temporada 1', gols: 20, assistencias: 15, jogosSemSofrerGols: 5, vitorias: 8, partidasJogadas: 10 },
-  { month: 2, year: 2023, title: 'Temporada 2', gols: 25, assistencias: 12, jogosSemSofrerGols: 3, vitorias: 7, partidasJogadas: 9 },
-  { month: 3, year: 2023, title: 'Temporada 3', gols: 18, assistencias: 20, jogosSemSofrerGols: 7, vitorias: 9, partidasJogadas: 11 },
-  // Adicione mais temporadas conforme necessário
-];
 
-// Função para gerar os cards de temporadas com base nos dados filtrados
-function generateSeasonCards(month, year) {
-  // Filtrar as temporadas baseadas no mês e ano selecionados
-  const filteredSeasons = seasonsData.filter(season => season.month === month && season.year === year);
 
-  // Selecionar o contêiner onde os cards serão inseridos
-  const seasonCardsContainer = document.getElementById('seasonCards');
-  seasonCardsContainer.innerHTML = ''; // Limpar conteúdo existente
+    </script>
 
-  // Iterar sobre as temporadas filtradas e criar os cards dinamicamente
-  filteredSeasons.forEach(season => {
-    const cardHtml = `
-       <div class="col-md-4 mb-4">
-            <div class="card">
-              <div class="season-card-body">
-                <h5 class="card-title">${season.title}</h5>
-                <ul class="list-unstyled">
-                  <li><strong>Gols:</strong> ${season.gols}</li>
-                  <li><strong>Assistências:</strong> ${season.assistencias}</li>
-                  <li><strong>Jogos sem sofrer gols:</strong> ${season.jogosSemSofrerGols}</li>
-                  <li><strong>Vitórias:</strong> ${season.vitorias}</li>
-                  <li><strong>Partidas jogadas:</strong> ${season.partidasJogadas}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        `;
-    seasonCardsContainer.insertAdjacentHTML('beforeend', cardHtml);
-  });
-
-  // Se não houver temporadas para o mês e ano selecionados, exibir mensagem ou realizar ação apropriada
-  if (filteredSeasons.length === 0) {
-    seasonCardsContainer.innerHTML = '<p class="text-center">Nenhuma temporada encontrada para este mês e ano.</p>';
-  }
-}
-
-// Evento para atualizar os cards de temporadas quando o mês ou ano são alterados
-document.getElementById('selectMonth').addEventListener('change', function () {
-  const selectedMonth = parseInt(this.value);
-  const selectedYear = parseInt(document.getElementById('selectYear').value);
-  generateSeasonCards(selectedMonth, selectedYear);
-});
-
-document.getElementById('selectYear').addEventListener('change', function () {
-  const selectedYear = parseInt(this.value);
-  const selectedMonth = parseInt(document.getElementById('selectMonth').value);
-  generateSeasonCards(selectedMonth, selectedYear);
-});
-
-// Inicialmente, gerar os cards com o mês e ano atuais
-const currentMonth = new Date().getMonth() + 1; // +1 pois getMonth() retorna de 0 a 11
-const currentYear = new Date().getFullYear();
-generateSeasonCards(currentMonth, currentYear);
-
-  </script>
-
-  </body>
+</body>
 
 </html>
-

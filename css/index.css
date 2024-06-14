@@ -559,6 +559,31 @@ body {
     }
   }
 
+   
+  .card-title {
+    font-size: 24px; /* Tamanho da fonte para o título (Temporada) */
+    font-weight: bold; /* Negrito para o título */
+  }
+
+  .card-text {
+    font-size: 18px; /* Tamanho da fonte para o texto (dados da temporada) */
+  }
+
+   /* Estilos adicionais conforme necessário */
+   .card-season {
+    padding: 20px; /* Espaçamento interno do card */
+    margin-bottom: 20px; /* Margem inferior do card */
+  }
+
+  .card-season-title {
+    font-size: 24px; /* Tamanho da fonte para o título (Temporada) */
+    font-weight: bold; /* Negrito para o título */
+    margin-bottom: 10px; /* Margem inferior do título */
+  }
+
+  .card-season-text {
+    font-size: 18px; /* Tamanho da fonte para o texto (dados da temporada) */
+  }
     
 
 
