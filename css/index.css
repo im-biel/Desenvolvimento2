@@ -619,7 +619,7 @@ body {
         margin: 0 auto; /* Centraliza horizontalmente */
     }
     .card {
-        left: -30vw; /* Anteriormente -66px */
+      text-align: center;
     }
     .imgstories {
         transform: scale(0.7);
@@ -665,12 +665,58 @@ body {
     }
 
       .card {
-          left: -25vw; /* Anteriormente -66px */
+        text-align: center;
       }
       .imgstories {
           transform: scale(0.7);
       }
 
+    }
+
+    @media screen and (max-width: 700px) {
+      .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
+        display: none;
+      }
+
+      .caixa {
+        height: 9.6vh;
+      }
+
+      .carousel-indicators {
+        top: 14vh; /* Anteriormente 54px */
+    }
+
+      .webstories__wrapper {
+        text-align: center;
+        align-items: center;
+        width: 40vw; /* Ajustado para largura relativa */
+        height: 33.7vh; /* Ajustado para altura relativa */
+        margin: 0 auto; /* Centraliza horizontalmente */
+    }
+      .webstories__wrapper1 {
+        left: 130px;
+        text-align: center;
+        align-items: center;
+        width: 40vw; /* Ajustado para largura relativa */
+        height: 35vh; /* Ajustado para altura relativa */
+        top: 3.13vh; /* Ajustado para posição relativa ao topo */
+        margin: 0 auto; /* Centraliza horizontalmente */
+    }
+      .webstories__wrapper2 {
+        text-align: center;
+        align-items: center;
+        width: 40vw; /* Ajustado para largura relativa */
+        height: 35vh; /* Ajustado para altura relativa */
+        top: 6.25vh; /* Ajustado para posição relativa ao topo */
+        margin: 0 auto; /* Centraliza horizontalmente */
+    }
+
+      .card {
+          text-align: center;
+      }
+      .imgstories {
+          transform: scale(0.7);
+      }
     }
 
 
