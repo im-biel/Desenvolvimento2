@@ -619,7 +619,7 @@ body {
         margin: 0 auto; /* Centraliza horizontalmente */
     }
     .card {
-      text-align: center;
+        left: -30vw; /* Anteriormente -66px */
     }
     .imgstories {
         transform: scale(0.7);
@@ -665,7 +665,7 @@ body {
     }
 
       .card {
-        text-align: center;
+          left: -25vw; /* Anteriormente -66px */
       }
       .imgstories {
           transform: scale(0.7);
@@ -712,7 +712,7 @@ body {
     }
 
       .card {
-          text-align: center;
+          left: -25vw; /* Anteriormente -66px */
       }
       .imgstories {
           transform: scale(0.7);
