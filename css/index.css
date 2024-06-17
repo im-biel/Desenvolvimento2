@@ -626,7 +626,7 @@ body {
     }
 }
 
-    /* @media screen and (max-width: 390px) {
+  @media screen and (max-width: 390px) {
       .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
         display: none;
       }
@@ -671,7 +671,7 @@ body {
           transform: scale(0.7);
       }
 
-    } */
+    } 
 
     
 
