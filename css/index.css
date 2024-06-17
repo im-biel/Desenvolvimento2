@@ -673,6 +673,54 @@ body {
 
     } 
 
+    @media screen and (max-width: 428px) {
+      .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
+        display: none;
+      }
+
+      .caixa {
+        height: 5.1vh;
+      }
+
+      .carousel-indicators {
+        top: 7vh; 
+    }
+
+      .webstories__wrapper {
+        text-align: center;
+        align-items: center;
+        width: 60vw; 
+        height: 33.7vh; 
+        margin: 0 auto; /
+    }
+      .webstories__wrapper1 {
+        left: 87px;
+        text-align: center;
+        align-items: center;
+        width: 60vw; 
+        height: 35vh;
+        top: 3.13vh; 
+        margin: 0 auto; 
+    }
+      .webstories__wrapper2 {
+        text-align: center;
+        align-items: center;
+        width: 60vw; 
+        height: 35vh; 
+        top: 6.25vh; 
+        margin: 0 auto; 
+    }
+
+      .card {
+          left: -25vw; 
+      }
+      .imgstories {
+          transform: scale(0.7);
+      }
+
+    } 
+
+
     
 
 
