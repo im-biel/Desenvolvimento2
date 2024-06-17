@@ -16,20 +16,22 @@
 <body>
 
   <div id="caixa" class="logocentral caixa">
-    <img src="/img/logo_site.png" alt="">
-    <div class="salas">
+   <div href="/index.html" > 
+    <img  src="/img/logo_site.png" alt="">
+  </div>
+    <div id="nossas-salas" class="salas">
       <div>NOSSAS SALAS</div>
     </div>
-    <div class="temporadas">
+    <div id="temporadas" class="temporadas">
       <div>TEMPORADAS</div>
     </div>
-    <div class="anuncios">
-      <div>ANÚNCIOS</div>
+    <div id="anuncios" class="anuncios">
+      <div>NOTÍCIAS</div>
     </div>
-    <div class="atualizacoes">
+    <div id="atualizacoes" class="atualizacoes">
       <div>ATUALIZAÇÕES</div>
     </div>
-    <div class="campeonatos">
+    <div id="campeonatos" class="campeonatos">
       <div>CAMPEONATOS</div>
     </div>
     <div class="barra">
@@ -80,6 +82,7 @@
         </div>
       </div>
 
+      <div  id="section-anuncios" class="content-section">
       <section class="web-stories">
         <div class="container">
           <div class="row">
@@ -89,12 +92,16 @@
               </div>
               <div class="webstories__text">QUEM SOMOS</div>
             </div>
+
+            <div id="section-atualizacoes" class="content-section">
             <div class="col-xs-12 webstories__wrapper1">
               <div class="imgstories">
                 <img src="/img/Pngtreerefresh_icon_graphic_design_template_4766732.png" alt="Web Story">
               </div>
               <div class="webstories__text1">ATUALIZAÇÕES</div>
             </div>
+          </div>
+
             <div class="col-xs-12 webstories__wrapper2">
               <div class="imgstories">
                 <img src="/img/symbole-de-nouvelles-jaune.png" alt="Web Story">
@@ -105,8 +112,10 @@
         </div>
       </section>
     </div>
+  </div> 
 
-    <div class="card card--horizontal card--featured card--text-big">
+    <div id="section-nossas-salas" class="content-section">
+    <div id="card" class="card card--horizontal card--featured card--text-big">
       <div class="card__wrapper">
         <!-- Parte da imagem -->
         <div class="card__image">
@@ -131,11 +140,12 @@
         </div>
       </div>
     </div>
+    </div>
 
-    <!-- ... Conteúdo existente do seu site ... -->
+    
 
 
-
+    <div  id="section-temporadas" class="content-section">
     <div class="container mt-5">
       <h2>Selecione o mês, ano e categoria:</h2>
       <form id="seasonForm" class="mb-3">
@@ -193,13 +203,14 @@
         <!-- Aqui serão adicionados os cards dinamicamente -->
       </div>
     </div>
+  </div>
 
 
 
-    <!-- Adicionando Bootstrap JS (opcional, apenas se você precisar de funcionalidades JavaScript do Bootstrap) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <!-- Adicionando Bootstrap JS (opcional, apenas se você precisar de funcionalidades JavaScript do Bootstrap) -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
     <script>
@@ -294,6 +305,88 @@ generateSeasonCards(0, 0, 'gols');
 
 
     </script>
+
+
+   
+   
+   <script>
+     // Função para navegar entre as seções e controlar a visibilidade
+     function navigateToSection(sectionId) {
+        // Atualizar a URL sem recarregar a página
+        history.pushState(null, '', sectionId);
+
+        // Esconder todas as seções principais
+        $('.content-section').hide();
+
+        // Mostrar a seção correspondente com base no ID
+        if (sectionId === '#section-nossas-salas') {
+          $('#section-nossas-salas').show();
+
+        } else if (sectionId === '#section-temporadas') {
+          $('#section-temporadas').show();
+
+        } else if (sectionId === '#section-anuncios') {
+          $('#section-anuncios').show();
+
+        } else if (sectionId === '#section-atualizacoes') {
+          $('#section-atualizacoes').show();
+
+        } else if (sectionId === '#section-campeonatos') {
+          $('#section-campeonatos').show();
+
+        } else if (sectionId === '#section-sejavip') {
+          $('#section-sejavip').show();
+        }
+
+        // Caso especial 
+        if (sectionId === '#section-anuncios') {
+          $('#section-anuncios').show();
+          $('#section-atualizacoes').show();
+        } else if(sectionId === '#section-atualizacoes') {
+          $('#section-anuncios').show();
+          $('#section-atualizacoes').show();
+
+      }
+    }
+
+
+    // Adicionar eventos de clique aos elementos para navegar entre seções
+    $(document).ready(function () {
+      $('#nossas-salas').click(function () {
+        navigateToSection('#section-nossas-salas');
+      });
+
+      $('#temporadas').click(function () {
+        navigateToSection('#section-temporadas');
+      });
+
+      $('#anuncios').click(function () {
+        navigateToSection('#section-anuncios');
+      });
+
+      $('#atualizacoes').click(function () {
+        navigateToSection('#section-atualizacoes');
+      });
+
+      $('#campeonatos').click(function () {
+        navigateToSection('#section-campeonatos');
+      });
+
+      $('#sejavip').click(function () {
+        navigateToSection('#section-sejavip');
+      });
+
+      // Verificar a URL atual ao carregar a página
+      const currentPath = window.location.hash;
+      if (currentPath) {
+        navigateToSection(currentPath);
+      } else {
+        // Mostrar uma seção padrão se não houver hash na URL
+        $('#section-nossas-salas').show();
+      }
+    });
+
+   </script>
 
 </body>
 

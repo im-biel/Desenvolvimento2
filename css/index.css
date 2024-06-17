@@ -569,6 +569,16 @@ body {
     font-size: 24px; /* Tamanho da fonte para o texto (dados da temporada) */
   }
 
+  #nossas-salas,
+  #temporadas,
+  #anuncios,
+  #atualizacoes,
+  #campeonatos,
+  #sejavip {
+    cursor: pointer;
+  }
+
+
   
     
 
