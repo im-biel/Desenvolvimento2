@@ -602,7 +602,7 @@ body {
         margin: 0 auto; /* Centraliza horizontalmente */
     }
     .webstories__wrapper1 {
-        left: 77px;
+        left: 78px;
         text-align: center;
         align-items: center;
         width: 60vw; /* Ajustado para largura relativa */
@@ -619,7 +619,7 @@ body {
         margin: 0 auto; /* Centraliza horizontalmente */
     }
     .card {
-        left: -30vw; /* Anteriormente -66px */
+        left: -31vw; /* Anteriormente -66px */
     }
     .imgstories {
         transform: scale(0.7);
