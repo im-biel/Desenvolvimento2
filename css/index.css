@@ -647,7 +647,7 @@ body {
         margin: 0 auto; /
     }
       .webstories__wrapper1 {
-        left: 82px;
+        left: 81px;
         text-align: center;
         align-items: center;
         width: 60vw; 
@@ -673,7 +673,7 @@ body {
 
     } 
 
-    @media screen and (max-width: 428px) {
+    /* @media screen and (max-width: 428px) {
       .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
         display: none;
       }
@@ -718,7 +718,7 @@ body {
           transform: scale(0.7);
       }
 
-    } 
+    }  */
 
 
     
