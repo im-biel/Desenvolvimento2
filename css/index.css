@@ -578,8 +578,110 @@ body {
     cursor: pointer;
   }
 
+  .vip-plan {
+    cursor: pointer;
+  }
 
-  
+/* Estilos para a seção VIP */
+#section-vip {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vip-plan .vipcard {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.vip-plan .vipcard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.vip-plan .card-body {
+  padding: 20px;
+}
+
+.vip-plan .card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.vip-plan .card-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.plan-details-card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.plan-details-card h4 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.plan-details-card ul {
+  padding-left: 20px;
+}
+
+.plan-details-card ul li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.plan-details-card strong {
+  font-size: 20px;
+  color: #333;
+}
+
+#vipForm .form-group {
+  margin-bottom: 20px;
+}
+
+#vipForm .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#vipForm .btn {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+
+
+/* Estilos específicos para diferentes planos */
+.vip-plan[data-plan="basic"] .vipcard {
+  border-color: #007bff; /* Borda azul para o plano básico */
+}
+
+.vip-plan[data-plan="premium"] .vipcard {
+  border-color: #28a745; /* Borda verde para o plano premium */
+}
+
+.vip-plan[data-plan="ultimate"] .vipcard {
+  border-color: #ffc107; /* Borda amarela para o plano ultimate */
+}
+
     
 
 

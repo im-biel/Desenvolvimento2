@@ -7,6 +7,7 @@
   <title>Bore Arena</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/index.css">
+  
 
   <style>
     /* Estilos adicionais conforme necessário */
@@ -205,6 +206,52 @@
     </div>
   </div>
 
+  <div id="section-vip" class="content-section">
+    <div class="caixa-vip mt-5">
+      <h2>Planos VIP</h2>
+      <div class="row">
+        <div class="col-md-4 vip-plan" data-plan="basic" data-payment-page="/html/pagamentovip.html">
+          <div class="vipcard">
+            <div class="card-body text-center">
+              <h5 class="card-title">VIP</h5>
+              <p class="card-text">Descrição do Plano Vip.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 vip-plan" data-plan="premium" data-payment-page="/html/pagamentopremium.html">
+          <div class="vipcard">
+            <div class="card-body text-center">
+              <h5 class="card-title">Premium</h5>
+              <p class="card-text">Descrição do Plano Premium.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 vip-plan" data-plan="ultimate" data-payment-page="/html/pagamentoLegend.html">
+          <div class="vipcard">
+            <div class="card-body text-center">
+              <h5 class="card-title">Legend</h5>
+              <p class="card-text">Descrição do Plano Legend.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5">
+        <h3>Especificações do Plano</h3>
+        <div id="planDetails" class="plan-details-card">
+          <!-- Detalhes do plano serão inseridos aqui -->
+        </div>
+        <form id="vipForm" class="mt-3">
+          <div class="form-group">
+            <label for="discordNick">Nick no Discord:</label>
+            <input type="text" id="discordNick" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="goToPayment">Ir para Pagamento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -398,6 +445,143 @@ generateSeasonCards(0, 0, 'gols');
 
   </script>
 
+  <script>
+
+  const vipPlans = {
+  basic: {
+    title: "VIP",
+    description: [
+      "Cor exclusiva no chat",
+      "Permissão de Pause e Despause",
+      "Cargo Customizado",
+    ],
+    price: "R$ 5,00",
+    paymentPage: "/html/pagamentovip.html"
+  },
+  premium: {
+    title: "Premium",
+    description: [
+      "Cores exclusivas no chat",
+      "Furar fila",
+    ],
+    price: "R$ 8,00",
+    paymentPage: "/html/pagamentopremium.html"
+  },
+  ultimate: {
+    title: "Legend",
+    description: [
+      "Cores exclusivas no chat",
+      "Troca fila",
+      "Comando de pause !p",
+      "Reseta a Bola"
+    ],
+    price: "R$ 12,00",
+    paymentPage: "/html/pagamentoLegend.html"
+  }
+};
+
+// Função para exibir detalhes do plano VIP
+function showPlanDetails(plan) {
+  const planDetailsContainer = document.getElementById('planDetails');
+  const planDetails = vipPlans[plan];
+
+  const descriptionList = planDetails.description.map(item => `<li>${item}</li>`).join('');
+
+  planDetailsContainer.innerHTML = `
+    <h4>${planDetails.title}</h4>
+    <ul>${descriptionList}</ul>
+    <p><strong>Preço: ${planDetails.price}</strong></p>
+  `;
+}
+
+// Adicionar eventos de clique aos planos VIP
+document.querySelectorAll('.vip-plan').forEach(planElement => {
+  planElement.addEventListener('click', function () {
+    const plan = this.getAttribute('data-plan');
+    showPlanDetails(plan);
+  });
+});
+
+
+// Adicionar eventos de clique aos planos VIP
+document.querySelectorAll('.vip-plan').forEach(planElement => {
+  planElement.addEventListener('click', function () {
+    // Remover a classe 'active' de todos os planos
+    document.querySelectorAll('.vip-plan').forEach(el => el.classList.remove('active'));
+
+    // Adicionar a classe 'active' ao plano clicado
+    this.classList.add('active');
+
+    // Mostrar os detalhes do plano clicado
+    const plan = this.getAttribute('data-plan');
+    showPlanDetails(plan);
+  });
+});
+
+// Adicionar evento de clique ao botão "Ir para Pagamento"
+document.getElementById('goToPayment').addEventListener('click', function(event) {
+  event.preventDefault(); // Evitar comportamento padrão do formulário
+
+  // Encontrar o plano selecionado
+  const selectedPlanId = document.querySelector('.vip-plan.active');
+  
+  if (selectedPlanId) {
+    const selectedPlan = vipPlans[selectedPlanId.getAttribute('data-plan')];
+
+    // Redirecionar para a página de pagamento do plano selecionado
+    if (selectedPlan && selectedPlan.paymentPage) {
+      window.location.href = selectedPlan.paymentPage;
+    } else {
+      console.error("Plano não encontrado ou página de pagamento não especificada.");
+    }
+  } else {
+    console.error("Nenhum plano selecionado.");
+
+  }
+});
+  </script>
+
+
+<script>
+  // No script existente no final do seu HTML
+
+document.getElementById('goToPayment').addEventListener('click', async function(event) {
+  event.preventDefault(); // Evitar comportamento padrão do formulário
+
+  // Encontrar o nick do Discord e o plano selecionado
+  const discordNick = document.getElementById('discordNick').value;
+  const selectedPlanId = document.querySelector('.vip-plan.active');
+
+  if (selectedPlanId && discordNick) {
+    const selectedPlan = selectedPlanId.getAttribute('data-plan');
+
+    try {
+      // Enviar dados para o backend via fetch ou outra biblioteca de requisições HTTP
+      const response = await fetch('/api/vip/store', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ discordNick, selectedPlan })
+      });
+
+      if (response.ok) {
+        // Redirecionar para a página de pagamento se os dados forem armazenados com sucesso
+        const paymentPageUrl = await response.json(); // Se o backend estiver retornando uma URL
+        window.location.href = paymentPageUrl;
+      } else {
+        console.error('Erro ao enviar dados para o backend.');
+      }
+    } catch (error) {
+      console.error('Erro:', error);
+    }
+  } else {
+    console.error('Por favor, preencha o nick do Discord e selecione um plano.');
+  }
+});
+
+</script>
+ 
 </body>
 
 </html>

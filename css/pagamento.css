@@ -1,0 +1,46 @@
+body {
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #000000bd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#qrCodeContainer {
+  margin-bottom: 20px;
+}
+
+#qrCodeText {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+#copyButton {
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#tituloPagamento {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Exemplo de outra fonte */
+  font-weight: bold;
+  color: #333;
+}
+
+.modal-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Exemplo de outra fonte para o modal */
+  font-size: 16px;
+  line-height: 1.6;
+}

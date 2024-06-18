@@ -1,27 +1,16 @@
-const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+// models/VipUser.js
 
-const User = sequelize.define('User', {
-    id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-    },
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true
-    },
-    password: {
-        type: DataTypes.STRING,
-        allowNull: false
-    }
-}, {
-    timestamps: false
+const mongoose = require('mongoose');
+
+// Definição do schema para um usuário VIP
+const vipUserSchema = new mongoose.Schema({
+  discordNick: { type: String, required: true },
+  plan: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = User;
+// Criação do modelo VipUser baseado no schema
+const VipUser = mongoose.model('VipUser', vipUserSchema);
+
+module.exports = VipUser;
+
