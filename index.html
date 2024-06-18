@@ -480,7 +480,13 @@ generateSeasonCards(0, 0, 'gols');
   }
 };
 
-// Função para exibir detalhes do plano VIP
+// Função para verificar se o campo de Nick do Discord está preenchido
+function isDiscordNickFilled() {
+  const discordNick = document.getElementById('discordNick').value.trim();
+  return discordNick !== '';
+}
+
+// Função para mostrar os detalhes do plano VIP
 function showPlanDetails(plan) {
   const planDetailsContainer = document.getElementById('planDetails');
   const planDetails = vipPlans[plan];
@@ -492,16 +498,34 @@ function showPlanDetails(plan) {
     <ul>${descriptionList}</ul>
     <p><strong>Preço: ${planDetails.price}</strong></p>
   `;
-}
 
-// Adicionar eventos de clique aos planos VIP
-document.querySelectorAll('.vip-plan').forEach(planElement => {
-  planElement.addEventListener('click', function () {
-    const plan = this.getAttribute('data-plan');
-    showPlanDetails(plan);
+  // Adicionar evento de clique ao botão "Ir para Pagamento"
+  document.getElementById('goToPayment').addEventListener('click', function(event) {
+    event.preventDefault(); // Evitar comportamento padrão do formulário
+
+    // Verificar se o campo de Nick do Discord está preenchido
+    if (isDiscordNickFilled()) {
+      // Encontrar o plano selecionado
+      const selectedPlanId = document.querySelector('.vip-plan.active');
+      
+      if (selectedPlanId) {
+        const selectedPlan = vipPlans[selectedPlanId.getAttribute('data-plan')];
+    
+        // Redirecionar para a página de pagamento do plano selecionado
+        if (selectedPlan && selectedPlan.paymentPage) {
+          window.location.href = selectedPlan.paymentPage;
+        } else {
+          console.error("Plano não encontrado ou página de pagamento não especificada.");
+        }
+      } else {
+        console.error("Nenhum plano selecionado.");
+      }
+    } else {
+      // Exibir mensagem de alerta para preencher o Nick do Discord
+      alert("Por favor, insira seu Nick no Discord antes de prosseguir para o pagamento.");
+    }
   });
-});
-
+}
 
 // Adicionar eventos de clique aos planos VIP
 document.querySelectorAll('.vip-plan').forEach(planElement => {
@@ -518,69 +542,11 @@ document.querySelectorAll('.vip-plan').forEach(planElement => {
   });
 });
 
-// Adicionar evento de clique ao botão "Ir para Pagamento"
-document.getElementById('goToPayment').addEventListener('click', function(event) {
-  event.preventDefault(); // Evitar comportamento padrão do formulário
 
-  // Encontrar o plano selecionado
-  const selectedPlanId = document.querySelector('.vip-plan.active');
-  
-  if (selectedPlanId) {
-    const selectedPlan = vipPlans[selectedPlanId.getAttribute('data-plan')];
-
-    // Redirecionar para a página de pagamento do plano selecionado
-    if (selectedPlan && selectedPlan.paymentPage) {
-      window.location.href = selectedPlan.paymentPage;
-    } else {
-      console.error("Plano não encontrado ou página de pagamento não especificada.");
-    }
-  } else {
-    console.error("Nenhum plano selecionado.");
-
-  }
-});
   </script>
 
 
-<script>
-  // No script existente no final do seu HTML
 
-document.getElementById('goToPayment').addEventListener('click', async function(event) {
-  event.preventDefault(); // Evitar comportamento padrão do formulário
-
-  // Encontrar o nick do Discord e o plano selecionado
-  const discordNick = document.getElementById('discordNick').value;
-  const selectedPlanId = document.querySelector('.vip-plan.active');
-
-  if (selectedPlanId && discordNick) {
-    const selectedPlan = selectedPlanId.getAttribute('data-plan');
-
-    try {
-      // Enviar dados para o backend via fetch ou outra biblioteca de requisições HTTP
-      const response = await fetch('/api/vip/store', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ discordNick, selectedPlan })
-      });
-
-      if (response.ok) {
-        // Redirecionar para a página de pagamento se os dados forem armazenados com sucesso
-        const paymentPageUrl = await response.json(); // Se o backend estiver retornando uma URL
-        window.location.href = paymentPageUrl;
-      } else {
-        console.error('Erro ao enviar dados para o backend.');
-      }
-    } catch (error) {
-      console.error('Erro:', error);
-    }
-  } else {
-    console.error('Por favor, preencha o nick do Discord e selecione um plano.');
-  }
-});
-
-</script>
  
 </body>
 
