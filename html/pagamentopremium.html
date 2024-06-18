@@ -6,19 +6,60 @@
   <title>Pagamento</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/pagamento.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="container mt-5">
-    <h2 class="text-center mb-4">Pagamento</h2>
+    <h2 class="text-center mb-4" id="tituloPagamento">Pagamento</h2>
     <div class="card">
       <div class="card-body text-center">
-        <div id="qrCodeContainer" class="mb-3">
-          <img src="/img/logo_site.png" alt="img" class="img-fluid">
+        <div id="qrCodeContainer" class="mb-4">
+          <a href="#" data-toggle="modal" data-target="#avisoModal">
+            <img src="/img/logo_site.png" alt="Logo do Site" class="img-fluid" id="siteLogo">
+          </a>
         </div>
         <div class="form-group">
           <input type="text" id="qrCodeText" class="form-control text-center" value="1234567890ABCDEF" readonly>
         </div>
-        <button id="copyButton" class="btn btn-primary">Copiar Código</button>
+        <button id="copyButton" class="btn btn-primary btn-lg btn-block">Copiar Código</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Aviso -->
+  <div class="modal fade" id="avisoModal" tabindex="-1" role="dialog" aria-labelledby="avisoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <p>Clique na imagem para ver mais informações</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Informações -->
+  <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel">
+            
+            Informações do Pagamento  
+            
+            <a  href="https://discord.gg/3UB4by6jv2" target="_blank"><i class="fab fa-discord" style="color: #7289DA;"></i></a></p>
+            
+        </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Ao fazer o pagamento mande o comprovante para algum Fundador ou Administrador.
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
       </div>
     </div>
   </div>
@@ -29,21 +70,34 @@
   <script src="/js/pagamento.js"></script>
 
   <script>
-    document.getElementById('copyButton').addEventListener('click', function() {
-  // Seleciona o campo de texto
-  var qrCodeText = document.getElementById('qrCodeText');
-  
-  // Seleciona o conteúdo do campo de texto
-  qrCodeText.select();
-  qrCodeText.setSelectionRange(0, 99999); // Para dispositivos móveis
-  
-  // Copia o conteúdo para a área de transferência
-  document.execCommand('copy');
-  
-  // Alerta para informar que o conteúdo foi copiado
-  alert('Código copiado: ' + qrCodeText.value);
-});
+    // Mostrar modal de aviso ao carregar a página
+    $(document).ready(function() {
+      $('#avisoModal').modal('show');
+    });
 
+    document.getElementById('copyButton').addEventListener('click', function() {
+      var qrCodeText = document.getElementById('qrCodeText');
+      qrCodeText.select();
+      qrCodeText.setSelectionRange(0, 99999);
+      document.execCommand('copy');
+      var copyButton = document.getElementById('copyButton');
+      copyButton.classList.add('btn-success');
+      setTimeout(function() {
+        copyButton.classList.remove('btn-success');
+      }, 1000);
+    });
+
+    // Animação do botão Copiar Código
+    $('#copyButton').hover(function() {
+      $(this).css('background-color', '#0062cc');
+    }, function() {
+      $(this).css('background-color', '#007bff');
+    });
+
+    // Mostrar modal de informações ao clicar no contêiner da imagem
+    $('#qrCodeContainer').click(function() {
+      $('#infoModal').modal('show');
+    });
   </script>
 </body>
 </html>

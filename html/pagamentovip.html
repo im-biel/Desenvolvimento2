@@ -6,6 +6,7 @@
   <title>Pagamento</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/pagamento.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="container mt-5">
@@ -13,7 +14,9 @@
     <div class="card">
       <div class="card-body text-center">
         <div id="qrCodeContainer" class="mb-4">
-          <img src="/img/logo_site.png" alt="Logo do Site" class="img-fluid" id="siteLogo">
+          <a href="#" data-toggle="modal" data-target="#avisoModal">
+            <img src="/img/logo_site.png" alt="Logo do Site" class="img-fluid" id="siteLogo">
+          </a>
         </div>
         <div class="form-group">
           <input type="text" id="qrCodeText" class="form-control text-center" value="1234567890ABCDEF" readonly>
@@ -23,6 +26,43 @@
     </div>
   </div>
 
+  <!-- Modal de Aviso -->
+  <div class="modal fade" id="avisoModal" tabindex="-1" role="dialog" aria-labelledby="avisoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <p>Clique na imagem para ver mais informações</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Informações -->
+  <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel">
+            
+            Informações do Pagamento  
+            
+            <a  href="https://discord.gg/3UB4by6jv2" target="_blank"><i class="fab fa-discord" style="color: #7289DA;"></i></a></p>
+            
+        </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Ao fazer o pagamento mande o comprovante para algum Fundador ou Administrador.
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -30,6 +70,11 @@
   <script src="/js/pagamento.js"></script>
 
   <script>
+    // Mostrar modal de aviso ao carregar a página
+    $(document).ready(function() {
+      $('#avisoModal').modal('show');
+    });
+
     document.getElementById('copyButton').addEventListener('click', function() {
       var qrCodeText = document.getElementById('qrCodeText');
       qrCodeText.select();
@@ -49,7 +94,7 @@
       $(this).css('background-color', '#007bff');
     });
 
-    // Mostrar modal de informações
+    // Mostrar modal de informações ao clicar no contêiner da imagem
     $('#qrCodeContainer').click(function() {
       $('#infoModal').modal('show');
     });
