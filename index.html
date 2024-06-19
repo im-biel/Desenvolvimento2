@@ -190,7 +190,7 @@
               </select>
             </div>
             <div style="top: 31px;" class="col-md-3 mb-3">
-              <button type="submit" class="btn btn-primary btn-block">Filtrar</button>
+              <button style="background-color: black; border: black " type="submit" class="btn btn-primary btn-block">Filtrar</button>
             </div>
           </div>
         </form>
@@ -210,7 +210,7 @@
     <div class="caixa-vip mt-5">
       <h2>Planos VIP</h2>
       <div class="row">
-        <div class="col-md-4 vip-plan" data-plan="basic" data-payment-page="/html/pagamentovip.html">
+        <div class="col-md-4 vip-plan" data-plan="basic" data-payment-page="/pagamento/pagamentovip.html">
           <div class="vipcard">
             <div class="card-body text-center">
               <h5 class="card-title">VIP</h5>
@@ -218,7 +218,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 vip-plan" data-plan="premium" data-payment-page="/html/pagamentopremium.html">
+        <div class="col-md-4 vip-plan" data-plan="premium" data-payment-page="/pagamento/pagamentopremium.html">
           <div class="vipcard">
             <div class="card-body text-center">
               <h5 class="card-title">Premium</h5>
@@ -226,7 +226,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 vip-plan" data-plan="ultimate" data-payment-page="/html/pagamentoLegend.html">
+        <div class="col-md-4 vip-plan" data-plan="ultimate" data-payment-page="/pagamento/pagamentoLegend.html">
           <div class="vipcard">
             <div class="card-body text-center">
               <h5 class="card-title">Legend</h5>
@@ -245,7 +245,7 @@
             <label for="discordNick">Nick no Discord:</label>
             <input type="text" id="discordNick" class="form-control" required>
           </div>
-          <button type="submit" class="btn btn-primary btn-block" id="goToPayment">Ir para Pagamento</button>
+          <button style="background-color: black;  border: black" type="submit" class="btn btn-primary btn-block" id="goToPayment">Ir para Pagamento</button>
         </form>
       </div>
     </div>
@@ -456,7 +456,7 @@ generateSeasonCards(0, 0, 'gols');
       "Cargo Customizado",
     ],
     price: "R$ 5,00",
-    paymentPage: "/html/pagamentovip.html"
+    paymentPage: "/pagamento/pagamentovip.html"
   },
   premium: {
     title: "Premium",
@@ -465,7 +465,7 @@ generateSeasonCards(0, 0, 'gols');
       "Furar fila",
     ],
     price: "R$ 8,00",
-    paymentPage: "/html/pagamentopremium.html"
+    paymentPage: "/pagamento/pagamentopremium.html"
   },
   ultimate: {
     title: "Legend",
@@ -476,7 +476,7 @@ generateSeasonCards(0, 0, 'gols');
       "Reseta a Bola"
     ],
     price: "R$ 12,00",
-    paymentPage: "/html/pagamentoLegend.html"
+    paymentPage: "/pagamento/pagamentoLegend.html"
   }
 };
 

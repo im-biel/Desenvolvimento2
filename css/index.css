@@ -671,15 +671,15 @@ body {
 
 /* Estilos específicos para diferentes planos */
 .vip-plan[data-plan="basic"] .vipcard {
-  border-color: #007bff; /* Borda azul para o plano básico */
+  border-color: #0707079c; /* Borda azul para o plano básico */
 }
 
 .vip-plan[data-plan="premium"] .vipcard {
-  border-color: #28a745; /* Borda verde para o plano premium */
+  border-color: #0707079c; /* Borda verde para o plano premium */
 }
 
 .vip-plan[data-plan="ultimate"] .vipcard {
-  border-color: #ffc107; /* Borda amarela para o plano ultimate */
+  border-color: #0707079c; /* Borda amarela para o plano ultimate */
 }
 
     
