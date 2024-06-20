@@ -425,11 +425,13 @@ body {
 .card__image {
   width: 100%;
   height: 270px; /* Ajuste a altura conforme necessário */
-  background-image: url('/img/Gravando_2024-06-01_203542_1.gif'); /* Substitua 'gif_animado.gif' pelo nome do seu arquivo GIF */
+  background-image: url('/img/Gravando_2024-06-01_203542_1.gif'); 
   background-size: cover; /* Faz com que o GIF se ajuste ao tamanho da div, mantendo sua proporção */
   position: relative;
   border-radius: 20px;
   overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+  background-position:  -18px; /* Posição inicial central */
+  background-origin: center; /* Define o ponto de origem da imagem no centro */
 }
 
 
@@ -449,7 +451,7 @@ body {
   left: 10px;
   padding: 2px 5px;
   border-radius: 3px;
-  background-color: #ff0000; /* Cor da categoria */
+  background-color: #f50a0a; /* Cor da categoria */
   color: #fff; /* Cor do texto */
   font-size: 0.8em;
 }
@@ -682,7 +684,126 @@ body {
   border-color: #0707079c; /* Borda amarela para o plano ultimate */
 }
 
-    
+
+
+/* Estilos CSS para os novos cards de campeonato */
+.card-campeonato {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-campeonato:hover {
+  transform: translateY(-5px);
+}
+
+.card-campeonato .card-img-top {
+  height: 250px; /* Ajuste a altura conforme necessário */
+  object-fit: cover;
+}
+
+.card-campeonato .card-body {
+  padding: 20px;
+}
+
+.card-campeonato .btn {
+  margin-top: 10px;
+  background-color: #17a2b8; /* Cor de fundo do botão */
+  border-color: #17a2b8; /* Cor da borda do botão */
+}
+
+.card-campeonato .btn:hover {
+  background-color: #117a8b; /* Cor de fundo do botão ao passar o mouse */
+  border-color: #117a8b; /* Cor da borda do botão ao passar o mouse */
+}
+
+.regras {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.regras ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#section-campeonatos {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+
+#section-campeonatos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card-campeonato img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-campeonato .btn-vermais {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.card-campeonato .btn-vermais:hover {
+  background-color: #0056b3;
+}
+
+.card__image__category1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background-color: #020202; /* Cor da categoria */
+  color: #fff; /* Cor do texto */
+  font-size: 0.8em;
+}
+
+
+/* Estilo para o rodapé */
+.rodape {
+  background-color: #343a40; /* Cor de fundo escura */
+  color: #fff; /* Cor do texto */
+  padding: 20px 0; /* Espaçamento interno */
+}
+
+.rodape-texto {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.redes-sociais {
+  list-style-type: none; /* Remover marcadores da lista */
+  padding-left: 0;
+  z-index: 4;
+}
+
+.redes-sociais li {
+  display: inline-block; /* Exibir ícones lado a lado */
+  margin-right: 15px;
+}
+
+.redes-sociais li a {
+  color: #ff0000; /* Cor dos ícones */
+  font-size: 18px;
+}
+
+.redes-sociais li a:hover {
+  color: #003369; /* Cor ao passar o mouse */
+}
+
+
+
 
 
 
@@ -775,7 +896,41 @@ body {
 
     } 
 
-    /* @media screen and (max-width: 428px) {
+    .card-campeonato .card-background {
+      position: relative;
+      width: 100%;
+      height: 200px; /* Altura desejada do card */
+      overflow: hidden;
+    }
+    
+    .card-campeonato .card-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Para ajustar a imagem ao container */
+      transition: transform 0.2s ease-in-out;
+    }
+    
+    .card-campeonato .card-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      opacity: 0.8;
+    }
+    
+    .card-campeonato .icon-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 50px; /* Largura da imagem pequena */
+      height: 50px; /* Altura da imagem pequena */
+    }
+    
+
+   @media screen and (max-width: 428px) {
       .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
         display: none;
       }
@@ -820,13 +975,7 @@ body {
           transform: scale(0.7);
       }
 
-    }  */
+    }  
 
 
-    
-
-
-
-
-
-
+  

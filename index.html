@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bore Arena</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1GQo4g0h6AdCE4yS3JzCGtZlFvQ1U9T0pDE3oAPFsgE7+PPTZIgKlH+oHq1upSi8p6+nzOxjExbY5FdkssIubQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/index.css">
-  
+
 
   <style>
     /* Estilos adicionais conforme necessário */
@@ -176,7 +177,7 @@
                 <!-- <option value="2026"></option>
                 <option value="2025"></option> -->
                 <option value="2024">2024</option>
-            
+
               </select>
             </div>
             <div class="col-md-3 mb-3">
@@ -190,7 +191,8 @@
               </select>
             </div>
             <div style="top: 31px;" class="col-md-3 mb-3">
-              <button style="background-color: black; border: black " type="submit" class="btn btn-primary btn-block">Filtrar</button>
+              <button style="background-color: black; border: black " type="submit"
+                class="btn btn-primary btn-block">Filtrar</button>
             </div>
           </div>
         </form>
@@ -205,6 +207,97 @@
       </div>
     </div>
   </div>
+
+
+
+  <div id="section-campeonatos" class="content-section">
+    <div class="container mt-5">
+      <h2>Campeonatos</h2>
+      <div class="row" id="campeonatosContainer">
+        <!-- Cards de campeonato serão inseridos dinamicamente aqui -->
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalRegras-Campeonato-1" tabindex="-1" role="dialog" aria-labelledby="modalRegrasLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="modalRegrasLabel">Regras do Campeonato 1</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li>Regra específica 1</li>
+        <li>Regra específica 2</li>
+        <li>Regra específica 3</li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="modalRegras-Campeonato-2" tabindex="-1" role="dialog" aria-labelledby="modalRegrasLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="modalRegrasLabel">Regras do Campeonato 2</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li>Regra específica A</li>
+        <li>Regra específica B</li>
+        <li>Regra específica C</li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="modalRegras-Campeonato-3" tabindex="-1" role="dialog" aria-labelledby="modalRegrasLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="modalRegrasLabel">Regras do Campeonato 3</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li>Regra específica D</li>
+        <li>Regra específica E</li>
+        <li>Regra específica F</li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
 
   <div id="section-vip" class="content-section">
     <div class="caixa-vip mt-5">
@@ -245,12 +338,44 @@
             <label for="discordNick">Nick no Discord:</label>
             <input type="text" id="discordNick" class="form-control" required>
           </div>
-          <button style="background-color: black;  border: black" type="submit" class="btn btn-primary btn-block" id="goToPayment">Ir para Pagamento</button>
+          <button style="background-color: black;  border: black" type="submit" class="btn btn-primary btn-block"
+            id="goToPayment">Ir para Pagamento</button>
         </form>
       </div>
     </div>
   </div>
+
+
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="row1">
+        <div class="col-md-6">
+          <p class="rodape-texto">Bore Haxball. Todos os Direitos Reservados.</p>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="redes-sociais">
+            
+            <li><a href="https://discord.gg/3UB4by6jv2"><i class="fab fa-discord"></i></a></li>
+
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
   
+
+
+
+
+
+
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -260,102 +385,106 @@
 
   <script>
     const seasonsData = [
-  {
-    month: 1,
-    year: 2024,
-    title: 'Temporada 1',
-    jogadores: [
-      // Gols
-      { nome: 'Kristofer', categoria: 'gols', valor: 18 },
+      {
+        month: 1,
+        year: 2024,
+        title: 'Temporada 1',
+        jogadores: [
+          // Gols
+          { nome: 'Kristofer', categoria: 'gols', valor: 18 },
+          { nome: 'Kristofer', categoria: 'gols', valor: 16 },
+          { nome: 'Kristofer', categoria: 'gols', valor: 14 },
+          { nome: 'Kristofer', categoria: 'gols', valor: 12 },
+          { nome: 'Kristofer', categoria: 'gols', valor: 10 },
 
-      // Assistências
-      { nome: 'Maria', categoria: 'assistencias', valor: 15 },
+          // Assistências
+          { nome: 'Maria', categoria: 'assistencias', valor: 15 },
 
-      // Vitórias
-      { nome: 'Ana', categoria: 'vitorias', valor: 5 },
+          // Vitórias
+          { nome: 'Ana', categoria: 'vitorias', valor: 5 },
 
-      // Partidas Jogadas
-      { nome: 'Pedro', categoria: 'partidasJogadas', valor: 20 },
+          // Partidas Jogadas
+          { nome: 'Pedro', categoria: 'partidasJogadas', valor: 20 },
 
-      // Partidas Sem Sofrer Gols
-      { nome: 'Pedro', categoria: 'jogosSemSofrerGols', valor: 20 },
+          // Partidas Sem Sofrer Gols
+          { nome: 'Pedro', categoria: 'jogosSemSofrerGols', valor: 20 },
 
-    ]
-  },
-  {
-    month: 2,
-    year: 2024,
-    title: 'Temporada 2',
-    jogadores: [
-      // Gols
-      
-      // Assistências
-      
-      // Vitórias
-      
-      // Partidas Jogadas
-      
-      // Partidas Sem Sofrer Gols
-      
-    ]
-  },
-  
-];
+        ]
+      },
+      {
+        month: 2,
+        year: 2024,
+        title: 'Temporada 2',
+        jogadores: [
+          // Gols
 
-function generateSeasonCards(month, year, category) {
-  // Filtrar as temporadas baseadas no mês e ano selecionados
-  let filteredSeasons = seasonsData;
+          // Assistências
 
-  if (month !== 0) {
-    filteredSeasons = filteredSeasons.filter(season => season.month === month);
-  }
-  if (year !== 0) {
-    filteredSeasons = filteredSeasons.filter(season => season.year === year);
-  }
+          // Vitórias
 
-  // Selecionar o contêiner onde os cards serão inseridos
-  const seasonCardsContainer = document.getElementById('seasonCards');
-  seasonCardsContainer.innerHTML = ''; // Limpar conteúdo existente
+          // Partidas Jogadas
 
-  // Iterar sobre as temporadas filtradas e criar os cards dinamicamente
-  filteredSeasons.forEach(season => {
-    const jogadoresFiltrados = season.jogadores.filter(jogador => jogador.categoria === category);
+          // Partidas Sem Sofrer Gols
 
-    if (jogadoresFiltrados.length > 0) {
-      const cardHtml = `
+        ]
+      },
+
+    ];
+
+    function generateSeasonCards(month, year, category) {
+      // Filtrar as temporadas baseadas no mês e ano selecionados
+      let filteredSeasons = seasonsData;
+
+      if (month !== 0) {
+        filteredSeasons = filteredSeasons.filter(season => season.month === month);
+      }
+      if (year !== 0) {
+        filteredSeasons = filteredSeasons.filter(season => season.year === year);
+      }
+
+      // Selecionar o contêiner onde os cards serão inseridos
+      const seasonCardsContainer = document.getElementById('seasonCards');
+      seasonCardsContainer.innerHTML = ''; // Limpar conteúdo existente
+
+      // Iterar sobre as temporadas filtradas e criar os cards dinamicamente
+      filteredSeasons.forEach(season => {
+        const jogadoresFiltrados = season.jogadores.filter(jogador => jogador.categoria === category);
+
+        if (jogadoresFiltrados.length > 0) {
+          const cardHtml = `
         <div class="col-md-4 mb-4">
-          <div class="card card-season">
+          <div class="card-season">
             <div class="card-body">
               <h5 class="card-title">${season.title}</h5>
               ${jogadoresFiltrados.map((jogador, index) => `
-                <p class="card-text">${index + 1}º | ${jogador.nome}: ${jogador.valor}</p>
+                <p style="font-size: 18px" class="card-text">${index + 1}º | ${jogador.nome}: ${jogador.valor}</p>
               `).join('')}
             </div>
           </div>
         </div>
       `;
-      seasonCardsContainer.insertAdjacentHTML('beforeend', cardHtml);
+          seasonCardsContainer.insertAdjacentHTML('beforeend', cardHtml);
+        }
+      });
+
+      // Se não houver temporadas para o filtro selecionado, exibir mensagem
+      if (filteredSeasons.length === 0 || seasonCardsContainer.innerHTML === '') {
+        seasonCardsContainer.innerHTML = '<p class="text-center">Nenhuma temporada encontrada para este filtro.</p>';
+      }
     }
-  });
 
-  // Se não houver temporadas para o filtro selecionado, exibir mensagem
-  if (filteredSeasons.length === 0 || seasonCardsContainer.innerHTML === '') {
-    seasonCardsContainer.innerHTML = '<p class="text-center">Nenhuma temporada encontrada para este filtro.</p>';
-  }
-}
+    document.getElementById('seasonForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Evitar o envio padrão do formulário
 
-document.getElementById('seasonForm').addEventListener('submit', function (event) {
-  event.preventDefault(); // Evitar o envio padrão do formulário
+      const selectedMonth = parseInt(document.getElementById('selectMonth').value);
+      const selectedYear = parseInt(document.getElementById('selectYear').value);
+      const selectedCategory = document.getElementById('selectCategory').value;
 
-  const selectedMonth = parseInt(document.getElementById('selectMonth').value);
-  const selectedYear = parseInt(document.getElementById('selectYear').value);
-  const selectedCategory = document.getElementById('selectCategory').value;
+      generateSeasonCards(selectedMonth, selectedYear, selectedCategory);
+    });
 
-  generateSeasonCards(selectedMonth, selectedYear, selectedCategory);
-});
-
-// Inicialmente, gerar os cards com todos os dados
-generateSeasonCards(0, 0, 'gols');
+    // Inicialmente, gerar os cards com todos os dados
+    generateSeasonCards(0, 0, 'gols');
 
 
 
@@ -447,107 +576,209 @@ generateSeasonCards(0, 0, 'gols');
 
   <script>
 
-  const vipPlans = {
-  basic: {
-    title: "VIP",
-    description: [
-      "Cor exclusiva no chat",
-      "Permissão de Pause e Despause",
-      "Cargo Customizado",
-    ],
-    price: "R$ 5,00",
-    paymentPage: "/pagamento/pagamentovip.html"
-  },
-  premium: {
-    title: "Premium",
-    description: [
-      "Cores exclusivas no chat",
-      "Furar fila",
-    ],
-    price: "R$ 8,00",
-    paymentPage: "/pagamento/pagamentopremium.html"
-  },
-  ultimate: {
-    title: "Legend",
-    description: [
-      "Cores exclusivas no chat",
-      "Troca fila",
-      "Comando de pause !p",
-      "Reseta a Bola"
-    ],
-    price: "R$ 12,00",
-    paymentPage: "/pagamento/pagamentoLegend.html"
-  }
-};
+    const vipPlans = {
+      basic: {
+        title: "VIP",
+        description: [
+          "Cor exclusiva no chat",
+          "Permissão de Pause e Despause",
+          "Cargo Customizado",
+        ],
+        price: "R$ 5,00",
+        paymentPage: "/pagamento/pagamentovip.html"
+      },
+      premium: {
+        title: "Premium",
+        description: [
+          "Cores exclusivas no chat",
+          "Furar fila",
+        ],
+        price: "R$ 8,00",
+        paymentPage: "/pagamento/pagamentopremium.html"
+      },
+      ultimate: {
+        title: "Legend",
+        description: [
+          "Cores exclusivas no chat",
+          "Troca fila",
+          "Comando de pause !p",
+          "Reseta a Bola"
+        ],
+        price: "R$ 12,00",
+        paymentPage: "/pagamento/pagamentoLegend.html"
+      }
+    };
 
-// Função para verificar se o campo de Nick do Discord está preenchido
-function isDiscordNickFilled() {
-  const discordNick = document.getElementById('discordNick').value.trim();
-  return discordNick !== '';
-}
+    // Função para verificar se o campo de Nick do Discord está preenchido
+    function isDiscordNickFilled() {
+      const discordNick = document.getElementById('discordNick').value.trim();
+      return discordNick !== '';
+    }
 
-// Função para mostrar os detalhes do plano VIP
-function showPlanDetails(plan) {
-  const planDetailsContainer = document.getElementById('planDetails');
-  const planDetails = vipPlans[plan];
+    // Função para mostrar os detalhes do plano VIP
+    function showPlanDetails(plan) {
+      const planDetailsContainer = document.getElementById('planDetails');
+      const planDetails = vipPlans[plan];
 
-  const descriptionList = planDetails.description.map(item => `<li>${item}</li>`).join('');
+      const descriptionList = planDetails.description.map(item => `<li>${item}</li>`).join('');
 
-  planDetailsContainer.innerHTML = `
+      planDetailsContainer.innerHTML = `
     <h4>${planDetails.title}</h4>
     <ul>${descriptionList}</ul>
     <p><strong>Preço: ${planDetails.price}</strong></p>
   `;
 
-  // Adicionar evento de clique ao botão "Ir para Pagamento"
-  document.getElementById('goToPayment').addEventListener('click', function(event) {
-    event.preventDefault(); // Evitar comportamento padrão do formulário
+      // Adicionar evento de clique ao botão "Ir para Pagamento"
+      document.getElementById('goToPayment').addEventListener('click', function (event) {
+        event.preventDefault(); // Evitar comportamento padrão do formulário
 
-    // Verificar se o campo de Nick do Discord está preenchido
-    if (isDiscordNickFilled()) {
-      // Encontrar o plano selecionado
-      const selectedPlanId = document.querySelector('.vip-plan.active');
-      
-      if (selectedPlanId) {
-        const selectedPlan = vipPlans[selectedPlanId.getAttribute('data-plan')];
-    
-        // Redirecionar para a página de pagamento do plano selecionado
-        if (selectedPlan && selectedPlan.paymentPage) {
-          window.location.href = selectedPlan.paymentPage;
+        // Verificar se o campo de Nick do Discord está preenchido
+        if (isDiscordNickFilled()) {
+          // Encontrar o plano selecionado
+          const selectedPlanId = document.querySelector('.vip-plan.active');
+
+          if (selectedPlanId) {
+            const selectedPlan = vipPlans[selectedPlanId.getAttribute('data-plan')];
+
+            // Redirecionar para a página de pagamento do plano selecionado
+            if (selectedPlan && selectedPlan.paymentPage) {
+              window.location.href = selectedPlan.paymentPage;
+            } else {
+              console.error("Plano não encontrado ou página de pagamento não especificada.");
+            }
+          } else {
+            console.error("Nenhum plano selecionado.");
+          }
         } else {
-          console.error("Plano não encontrado ou página de pagamento não especificada.");
+          // Exibir mensagem de alerta para preencher o Nick do Discord
+          alert("Por favor, insira seu Nick no Discord antes de prosseguir para o pagamento.");
         }
-      } else {
-        console.error("Nenhum plano selecionado.");
-      }
-    } else {
-      // Exibir mensagem de alerta para preencher o Nick do Discord
-      alert("Por favor, insira seu Nick no Discord antes de prosseguir para o pagamento.");
+      });
     }
-  });
-}
 
-// Adicionar eventos de clique aos planos VIP
-document.querySelectorAll('.vip-plan').forEach(planElement => {
-  planElement.addEventListener('click', function () {
-    // Remover a classe 'active' de todos os planos
-    document.querySelectorAll('.vip-plan').forEach(el => el.classList.remove('active'));
+    // Adicionar eventos de clique aos planos VIP
+    document.querySelectorAll('.vip-plan').forEach(planElement => {
+      planElement.addEventListener('click', function () {
+        // Remover a classe 'active' de todos os planos
+        document.querySelectorAll('.vip-plan').forEach(el => el.classList.remove('active'));
 
-    // Adicionar a classe 'active' ao plano clicado
-    this.classList.add('active');
+        // Adicionar a classe 'active' ao plano clicado
+        this.classList.add('active');
 
-    // Mostrar os detalhes do plano clicado
-    const plan = this.getAttribute('data-plan');
-    showPlanDetails(plan);
-  });
-});
+        // Mostrar os detalhes do plano clicado
+        const plan = this.getAttribute('data-plan');
+        showPlanDetails(plan);
+      });
+    });
 
 
   </script>
 
+<script>
 
 
- 
+const campeonatosData = [
+  {
+    nome: 'Campeonato 1',
+    descricao: '',
+     imagemFundo: '/img/bannergif.gif',
+    status: 'andamento', // Exemplo de status, pode ser qualquer valor definido por você
+    inscricoesAbertas: true,
+    statusManual: 'Em Andamento' 
+  },
+  {
+    nome: 'Campeonato 2',
+     descricao: '',
+    imagemFundo: 'caminho/para/imagem2.jpg',
+    status: 'finalizado',
+    inscricoesAbertas: false,
+    statusManual: 'Finalizado' 
+  },
+  {
+    nome: 'Campeonato 3',
+    descricao: '',
+     imagemFundo: 'caminho/para/imagem3.jpg',
+    status: 'andamento',
+    inscricoesAbertas: true,
+    statusManual: 'Inscrições Abertas' 
+  }
+];
+
+function renderCampeonatos() {
+  const campeonatosContainer = document.getElementById('campeonatosContainer');
+  campeonatosContainer.innerHTML = ''; // Limpar conteúdo existente
+
+  campeonatosData.forEach(campeonato => {
+    // Definir o status com base no statusManual, se estiver definido, caso contrário, usar regras padrão
+    const status = campeonato.statusManual || (campeonato.status === 'finalizado' ? 'Finalizado' : (campeonato.inscricoesAbertas ? 'Inscrições Abertas' : 'Em Andamento'));
+
+    // Construir o HTML do card com o status definido
+    const cardHtml = `
+      <div class="col-md-4">
+        <div class="card-campeonato">
+          <div class="card-background">
+            <img src="${campeonato.imagemFundo}" alt="${campeonato.nome}">
+          </div>
+          <div class="card-overlay">
+            <!-- Conteúdo opcional para sobreposição -->
+          </div>
+          <!--<img src="${campeonato.imagemIcone}" class="icon-center" alt="Ícone do campeonato">-->
+          <div class="card-body">
+            <h5 class="card-title">${campeonato.nome}</h5>
+            <p class="card-text">${campeonato.descricao}</p>
+            <div class="card__image__category1">
+              <span class="card__image__category__name">${status}</span>
+              <span class="ico--video card__image__category__ico"></span>
+            </div>
+             <button style="background-color: black;  border: black" class="btn btn-vermais" data-toggle="modal" data-target="#modalRegras-${campeonato.nome.replace(/\s+/g, '-')}">
+          Ver mais
+        </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    campeonatosContainer.insertAdjacentHTML('beforeend', cardHtml);
+  });
+}
+
+// Chamada inicial para renderizar os cards de campeonato
+renderCampeonatos();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Adicionar evento de clique ao botão "Ver mais"
+document.querySelectorAll('.card-campeonato .btn').forEach(btn => {
+  btn.addEventListener('click', function(event) {
+    event.preventDefault(); // Evitar o comportamento padrão de seguir o link
+
+    // Exibir o modal de regras
+    $('#modalRegras').modal('show');
+  });
+});
+
+</script>
+
+
 </body>
 
 </html>
