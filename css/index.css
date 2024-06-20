@@ -807,6 +807,10 @@ body {
 
 
 @media screen and (max-width: 1920px) {
+  .campeonatos {
+    left: 1800px;
+  }
+
   .temporadas {
       left: 770px;
   }
@@ -853,6 +857,10 @@ body {
 
 
 @media screen and (max-width: 1366px) {
+  .campeonatos {
+    left: 1250px;
+  }
+
   .temporadas {
       left: 525px;
   }
@@ -861,7 +869,7 @@ body {
 }
 
   .caixa {
-      height: 22.0vh; 
+      height: 19.7vh; 
   }
 
   .carousel-indicators {
@@ -900,7 +908,20 @@ body {
 
 
 @media screen and (max-width: 1280px) {
+  .campeonatos {
+    left: 1165px;
+  }
+
+  .temporadas {
+    left:  494px;
+  }
+
+  .salas {
+    left: 330px;
+  }
+
   .caixa {
+      width: 1280px auto;
       height: 15.5vh; 
   }
 
@@ -936,6 +957,57 @@ body {
 }
   
 }
+
+@media screen and (max-width: 1280px) {
+  .campeonatos {
+    left: 1030px;
+  }
+
+  .temporadas {
+    left:  430px;
+  }
+
+  .salas {
+    left: 290px;
+  }
+
+  .caixa {
+      height: 15.5vh; 
+  }
+
+  .carousel-indicators {
+    top: 25.4vh; 
+}
+ .webstories__wrapper {
+    text-align: center;
+    align-items: center;
+    width: 20vw; /* Ajustado para largura relativa */
+    height: 35vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.webstories__wrapper1 {
+    text-align: center;
+    align-items: center;
+    width: 20vw; 
+    height:  35vh; 
+    margin: 0 auto; 
+}
+.webstories__wrapper2 {
+    text-align: center;
+    align-items: center;
+    width: 20vw; /* Ajustado para largura relativa */
+    height:  35vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.card {
+    text-align: center;
+}
+.imgstories {
+    transform: scale(0.7);
+}
+  
+}
+
 
 @media screen and (max-width: 390px) {
   .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
