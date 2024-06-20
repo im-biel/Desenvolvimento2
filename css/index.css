@@ -241,6 +241,8 @@ body {
     transition: transform 0.2s ease; /* Adiciona uma transição suave ao movimento */
   }
 
+ 
+
   .salas-disponiveis {
     height: auto;
     top: -260px;
@@ -804,178 +806,314 @@ body {
 
 
 
+@media screen and (max-width: 1920px) {
+  .temporadas {
+      left: 770px;
+  }
+  .salas {
+    left: 550px;
+}
+
+  .caixa {
+      height: 15.0vh; 
+  }
+
+  .carousel-indicators {
+    top: 10vh; 
+}
+ .webstories__wrapper {
+    text-align: center;
+    align-items: center;
+    width: 15vw; /* Ajustado para largura relativa */
+    height: 26vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.webstories__wrapper1 {
+    text-align: center;
+    align-items: center;
+    width: 15vw; 
+    height:  26vh; 
+    margin: 0 auto; 
+}
+.webstories__wrapper2 {
+    text-align: center;
+    align-items: center;
+    width: 15vw; /* Ajustado para largura relativa */
+    height:  26vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.card {
+    text-align: center;
+}
+.imgstories {
+    transform: scale(0.9);
+}
+  
+}
+
+
+@media screen and (max-width: 1366px) {
+  .temporadas {
+      left: 525px;
+  }
+  .salas {
+    left: 370px;
+}
+
+  .caixa {
+      height: 22.0vh; 
+  }
+
+  .carousel-indicators {
+    top: 35vh; 
+}
+ .webstories__wrapper {
+    text-align: center;
+    align-items: center;
+    width: 17vw; /* Ajustado para largura relativa */
+    height: 42vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.webstories__wrapper1 {
+    text-align: center;
+    align-items: center;
+    width: 17vw; 
+    height:  42vh; 
+    margin: 0 auto; 
+}
+.webstories__wrapper2 {
+    text-align: center;
+    align-items: center;
+    width: 17vw; /* Ajustado para largura relativa */
+    height:  42vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.card {
+    text-align: center;
+}
+.imgstories {
+    transform: scale(0.9);
+}
+  
+}
+
+
+
+@media screen and (max-width: 1280px) {
+  .caixa {
+      height: 15.5vh; 
+  }
+
+  .carousel-indicators {
+    top: 10vh; 
+}
+ .webstories__wrapper {
+    text-align: center;
+    align-items: center;
+    width: 20vw; /* Ajustado para largura relativa */
+    height: 33.7vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.webstories__wrapper1 {
+    text-align: center;
+    align-items: center;
+    width: 20vw; 
+    height:  33.7vh; 
+    margin: 0 auto; 
+}
+.webstories__wrapper2 {
+    text-align: center;
+    align-items: center;
+    width: 20vw; /* Ajustado para largura relativa */
+    height:  33.7vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.card {
+    text-align: center;
+}
+.imgstories {
+    transform: scale(0.7);
+}
+  
+}
+
+@media screen and (max-width: 390px) {
+  .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
+    display: none;
+  }
+
+  .caixa {
+    height: 5.1vh;
+  }
+
+  .carousel-indicators {
+    top: 7vh; 
+}
+
+  .webstories__wrapper {
+    text-align: center;
+    align-items: center;
+    width: 60vw; 
+    height: 33.7vh; 
+    margin: 0 auto; /
+}
+  .webstories__wrapper1 {
+    left: 79px;
+    text-align: center;
+    align-items: center;
+    width: 60vw; 
+    height: 35vh;
+    top: 3.13vh; 
+    margin: 0 auto; 
+}
+  .webstories__wrapper2 {
+    text-align: center;
+    align-items: center;
+    width: 60vw; 
+    height: 35vh; 
+    top: 6.25vh; 
+    margin: 0 auto; 
+}
+
+  .card {
+      left: -25vw; 
+  }
+  .imgstories {
+      transform: scale(0.7);
+  }
+
+} 
+
+.card-campeonato .card-background {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Altura desejada do card */
+  overflow: hidden;
+}
+
+.card-campeonato .card-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para ajustar a imagem ao container */
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-campeonato .card-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.card-campeonato .icon-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50px; /* Largura da imagem pequena */
+  height: 50px; /* Altura da imagem pequena */
+}
+
+
 
 
 
 @media screen and (max-width: 375px) {
-    .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
-        display: none;
-    }
-    .caixa {
-        height: 4.9vh; /* Anteriormente 35px */
-    }
-    .carousel-indicators {
-        top: 12.5vh; /* Anteriormente 54px */
-    }
-     .webstories__wrapper {
-        text-align: center;
-        align-items: center;
-        width: 60vw; /* Ajustado para largura relativa */
-        height: 33.7vh; /* Ajustado para altura relativa */
-        margin: 0 auto; /* Centraliza horizontalmente */
-    }
-    .webstories__wrapper1 {
-        left: 77px;
-        text-align: center;
-        align-items: center;
-        width: 60vw; /* Ajustado para largura relativa */
-        height: 35vh; /* Ajustado para altura relativa */
-        top: 3.13vh; /* Ajustado para posição relativa ao topo */
-        margin: 0 auto; /* Centraliza horizontalmente */
-    }
-    .webstories__wrapper2 {
-        text-align: center;
-        align-items: center;
-        width: 60vw; /* Ajustado para largura relativa */
-        height: 35vh; /* Ajustado para altura relativa */
-        top: 6.25vh; /* Ajustado para posição relativa ao topo */
-        margin: 0 auto; /* Centraliza horizontalmente */
-    }
-    .card {
-        left: -31vw; /* Anteriormente -66px */
-    }
-    .imgstories {
-        transform: scale(0.7);
-    }
+  .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
+      display: none;
+  }
+  .caixa {
+      height: 4.2vh; 
+  }
+  .carousel-indicators {
+      top: 5vh; 
+  }
+   .webstories__wrapper {
+      text-align: center;
+      align-items: center;
+      width: 60vw; /* Ajustado para largura relativa */
+      height: 27vh; /* Ajustado para altura relativa */
+      margin: 0 auto; /* Centraliza horizontalmente */
+  }
+  .webstories__wrapper1 {
+      text-align: center;
+      align-items: center;
+      width: 60vw; 
+      height:  27vh; 
+      top: 3.13vh; 
+      margin: 0 auto; 
+  }
+  .webstories__wrapper2 {
+      text-align: center;
+      align-items: center;
+      width: 60vw; /* Ajustado para largura relativa */
+      height:  27vh; /* Ajustado para altura relativa */
+      top: 6.25vh; /* Ajustado para posição relativa ao topo */
+      margin: 0 auto; /* Centraliza horizontalmente */
+  }
+  .card {
+      left: -31vw; 
+  }
+  .imgstories {
+      transform: scale(0.7);
+  }
 }
 
-  @media screen and (max-width: 390px) {
-      .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
-        display: none;
-      }
 
-      .caixa {
-        height: 5.1vh;
-      }
 
-      .carousel-indicators {
-        top: 7vh; 
-    }
+@media screen and (max-width: 360px) {
+  .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
+      display: none;
+  }
+  .caixa {
+      height: 4.2vh; 
+  }
 
-      .webstories__wrapper {
-        text-align: center;
-        align-items: center;
-        width: 60vw; 
-        height: 33.7vh; 
-        margin: 0 auto; /
-    }
-      .webstories__wrapper1 {
-        left: 81px;
-        text-align: center;
-        align-items: center;
-        width: 60vw; 
-        height: 35vh;
-        top: 3.13vh; 
-        margin: 0 auto; 
-    }
-      .webstories__wrapper2 {
-        text-align: center;
-        align-items: center;
-        width: 60vw; 
-        height: 35vh; 
-        top: 6.25vh; 
-        margin: 0 auto; 
-    }
+  .carousel-indicators {
+    top: 10vh; 
+}
+ .webstories__wrapper {
+    text-align: center;
+    align-items: center;
+    width: 60vw; /* Ajustado para largura relativa */
+    height: 33.7vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.webstories__wrapper1 {
+    left: 87px;
+    text-align: center;
+    align-items: center;
+    width: 60vw; 
+    height: 35vh; 
+    top: 3.13vh; 
+    margin: 0 auto; 
+}
+.webstories__wrapper2 {
+    text-align: center;
+    align-items: center;
+    width: 60vw; /* Ajustado para largura relativa */
+    height: 35vh; /* Ajustado para altura relativa */
+    top: 6.25vh; /* Ajustado para posição relativa ao topo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.card {
+    left: -31vw; 
+}
+.imgstories {
+    transform: scale(0.7);
+}
+  
+}
 
-      .card {
-          left: -25vw; 
-      }
-      .imgstories {
-          transform: scale(0.7);
-      }
 
-    } 
 
-    .card-campeonato .card-background {
-      position: relative;
-      width: 100%;
-      height: 200px; /* Altura desejada do card */
-      overflow: hidden;
-    }
-    
-    .card-campeonato .card-background img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Para ajustar a imagem ao container */
-      transition: transform 0.2s ease-in-out;
-    }
-    
-    .card-campeonato .card-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      opacity: 0.8;
-    }
-    
-    .card-campeonato .icon-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      width: 50px; /* Largura da imagem pequena */
-      height: 50px; /* Altura da imagem pequena */
-    }
+
+  
     
 
-   @media screen and (max-width: 428px) {
-      .salas, .temporadas, .anuncios, .atualizacoes, .campeonatos, .barra, .barra1, .sejavip {
-        display: none;
-      }
-
-      .caixa {
-        height: 5.1vh;
-      }
-
-      .carousel-indicators {
-        top: 7vh; 
-    }
-
-      .webstories__wrapper {
-        text-align: center;
-        align-items: center;
-        width: 60vw; 
-        height: 33.7vh; 
-        margin: 0 auto; /
-    }
-      .webstories__wrapper1 {
-        left: 87px;
-        text-align: center;
-        align-items: center;
-        width: 60vw; 
-        height: 35vh;
-        top: 3.13vh; 
-        margin: 0 auto; 
-    }
-      .webstories__wrapper2 {
-        text-align: center;
-        align-items: center;
-        width: 60vw; 
-        height: 35vh; 
-        top: 6.25vh; 
-        margin: 0 auto; 
-    }
-
-      .card {
-          left: -25vw; 
-      }
-      .imgstories {
-          transform: scale(0.7);
-      }
-
-    }  
 
 
   
