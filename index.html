@@ -418,6 +418,8 @@
       </div>
     </div>
 
+    
+
     <div id="section-vip" class="content-section">
       <div class="caixa-vip mt-5">
         <h2>Planos VIP</h2>
@@ -646,8 +648,8 @@
           $("#section-atualizacoes").show();
         } else if (sectionId === "#section-campeonatos") {
           $("#section-campeonatos").show();
-        } else if (sectionId === "#section-sejavip") {
-          $("#section-sejavip").show();
+        } else if (sectionId === "#section-vip") {
+          $("#section-vip").show();
         }
 
         // Caso especial
@@ -683,7 +685,7 @@
         });
 
         $("#sejavip").click(function () {
-          navigateToSection("#section-sejavip");
+          navigateToSection("#section-vip");
         });
 
         // Verificar a URL atual ao carregar a página
@@ -894,5 +896,8 @@
         });
       });
     </script>
+
+
+
   </body>
 </html>
