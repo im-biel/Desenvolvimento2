@@ -772,36 +772,29 @@ body {
 }
 
 
-/* Estilo para o rodapé */
-.rodape {
-  background-color: #343a40; /* Cor de fundo escura */
-  color: #fff; /* Cor do texto */
-  padding: 20px 0; /* Espaçamento interno */
+.discord {
+  position: absolute; /* Define a posição absoluta para o ícone */
+  bottom: 20px; /* Ajusta a distância do ícone ao rodapé */
+  right: 20px; /* Ajusta a distância do ícone à direita */
+  top: 5px;
+  scale: 0.8;
+  z-index: 999; /* Garante que o ícone esteja acima de outros elementos */
 }
 
-.rodape-texto {
-  font-size: 14px;
-  margin-bottom: 0;
+.discord a {
+  text-decoration: none; /* Remove o sublinhado padrão */
+  color: #fff; /* Define a cor do ícone */
+  font-size: 24px; /* Ajusta o tamanho do ícone conforme necessário */
 }
 
-.redes-sociais {
-  list-style-type: none; /* Remover marcadores da lista */
-  padding-left: 0;
-  z-index: 4;
+/* O estilo para o ícone do Discord (Font Awesome) */
+.discord i {
+  transition: color 0.3s ease; /* Adiciona uma transição suave para a cor */
 }
 
-.redes-sociais li {
-  display: inline-block; /* Exibir ícones lado a lado */
-  margin-right: 15px;
-}
-
-.redes-sociais li a {
-  color: #ff0000; /* Cor dos ícones */
-  font-size: 18px;
-}
-
-.redes-sociais li a:hover {
-  color: #003369; /* Cor ao passar o mouse */
+/* Define a cor do ícone ao passar o mouse */
+.discord i:hover {
+  color: #7289da; /* Cor específica do Discord */
 }
 
 
@@ -844,6 +837,55 @@ body {
     align-items: center;
     width: 15vw; /* Ajustado para largura relativa */
     height:  26vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.card {
+    text-align: center;
+}
+.imgstories {
+    transform: scale(0.9);
+}
+  
+}
+
+@media screen and (max-width: 1708px) {
+  .campeonatos {
+    left: 1593px;
+  }
+
+  .temporadas {
+    left: 678px;
+  }
+  .salas {
+    left: 476px;
+}
+
+  .caixa {
+      height: 17.8vh; 
+  }
+
+  .carousel-indicators {
+    top: 30vh; 
+}
+ .webstories__wrapper {
+    text-align: center;
+    align-items: center;
+    width: 15vw; /* Ajustado para largura relativa */
+    height: 29vh; /* Ajustado para altura relativa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.webstories__wrapper1 {
+    text-align: center;
+    align-items: center;
+    width: 15vw; 
+    height: 29vh; 
+    margin: 0 auto; 
+}
+.webstories__wrapper2 {
+    text-align: center;
+    align-items: center;
+    width: 15vw; /* Ajustado para largura relativa */
+    height:  29vh; /* Ajustado para altura relativa */
     margin: 0 auto; /* Centraliza horizontalmente */
 }
 .card {
@@ -907,68 +949,19 @@ body {
 
 
 
-@media screen and (max-width: 1280px) {
-  .campeonatos {
-    left: 1165px;
-  }
 
-  .temporadas {
-    left:  494px;
-  }
-
-  .salas {
-    left: 330px;
-  }
-
-  .caixa {
-      width: 1280px auto;
-      height: 15.5vh; 
-  }
-
-  .carousel-indicators {
-    top: 10vh; 
-}
- .webstories__wrapper {
-    text-align: center;
-    align-items: center;
-    width: 20vw; /* Ajustado para largura relativa */
-    height: 33.7vh; /* Ajustado para altura relativa */
-    margin: 0 auto; /* Centraliza horizontalmente */
-}
-.webstories__wrapper1 {
-    text-align: center;
-    align-items: center;
-    width: 20vw; 
-    height:  33.7vh; 
-    margin: 0 auto; 
-}
-.webstories__wrapper2 {
-    text-align: center;
-    align-items: center;
-    width: 20vw; /* Ajustado para largura relativa */
-    height:  33.7vh; /* Ajustado para altura relativa */
-    margin: 0 auto; /* Centraliza horizontalmente */
-}
-.card {
-    text-align: center;
-}
-.imgstories {
-    transform: scale(0.7);
-}
-  
-}
 
 @media screen and (max-width: 1280px) {
   .campeonatos {
-    left: 1030px;
+    left: 1170px;
   }
 
   .temporadas {
-    left:  430px;
+    left:  490px;
   }
 
   .salas {
-    left: 290px;
+    left: 310px;
   }
 
   .caixa {

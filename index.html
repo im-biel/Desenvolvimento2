@@ -1,716 +1,839 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bore Arena</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bore Arena</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1GQo4g0h6AdCE4yS3JzCGtZlFvQ1U9T0pDE3oAPFsgE7+PPTZIgKlH+oHq1upSi8p6+nzOxjExbY5FdkssIubQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/css/index.css">
+  <body>
+
+    
 
 
-  <style>
-    /* Estilos adicionais conforme necessário */
-  </style>
-</head>
+    <div id="caixa" class="logocentral caixa">
+    
 
-<body>
+      <a href="/index.html">
+        <img src="/img/logo_site.png" alt="" />
+      </a>
 
-  
+      <div class="discord">
+        <a href="https://discord.gg/3UB4by6jv2" target="_blank">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+      </div>
+      
 
-  <div id="caixa" class="logocentral caixa">
-    <a href="/index.html">
-      <img src="/img/logo_site.png" alt="">
-    </a>
-    <div id="nossas-salas" class="salas">
-      <div>NOSSAS SALAS</div>
+      <div id="nossas-salas" class="salas">
+        <div>NOSSAS SALAS</div>
+      </div>
+      <div id="temporadas" class="temporadas">
+        <div>TEMPORADAS</div>
+      </div>
+      <div id="anuncios" class="anuncios">
+        <div>NOTÍCIAS</div>
+      </div>
+      <div id="atualizacoes" class="atualizacoes">
+        <div>ATUALIZAÇÕES</div>
+      </div>
+      <div id="campeonatos" class="campeonatos">
+        <div>CAMPEONATOS</div>
+      </div>
+      <div class="barra">
+        <div>|</div>
+      </div>
+      <div class="barra1">
+        <div>|</div>
+      </div>
+      <div id="sejavip" class="sejavip">SEJAVIP</div>
     </div>
-    <div id="temporadas" class="temporadas">
-      <div>TEMPORADAS</div>
-    </div>
-    <div id="anuncios" class="anuncios">
-      <div>NOTÍCIAS</div>
-    </div>
-    <div id="atualizacoes" class="atualizacoes">
-      <div>ATUALIZAÇÕES</div>
-    </div>
-    <div id="campeonatos" class="campeonatos">
-      <div>CAMPEONATOS</div>
-    </div>
-    <div class="barra">
-      <div>|</div>
-    </div>
-    <div class="barra1">
-      <div>|</div>
-    </div>
-    <div id="sejavip" class="sejavip">SEJAVIP</div>
-  </div>
 
+    <div class="banner">
+      <!-- Conteúdo do banner aqui -->
+      <div class="banner-container">
+        <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li
+              data-target="#bannerCarousel"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#bannerCarousel" data-slide-to="1"></li>
+            <!-- <li data-target="#bannerCarousel" data-slide-to="2"></li> -->
+          </ol>
 
-
-  <div class="banner">
-    <!-- Conteúdo do banner aqui -->
-    <div class="banner-container">
-      <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#bannerCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#bannerCarousel" data-slide-to="1"></li>
-          <!-- <li data-target="#bannerCarousel" data-slide-to="2"></li> -->
-        </ol>
-
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <a href="#" data-toggle="tooltip" data-placement="top" data-interval="4000">
-              <img src="/img/BANNER_1_SITE.png" alt="Banner 1" class="d-block w-100">
-            </a>
-          </div>
-          <div class="carousel-item">
-            <a href="#" data-toggle="tooltip" data-placement="top" data-interval="5200">
-              <img src="/img/bannergif.gif" alt="Banner 2" class="d-block w-100">
-            </a>
-          </div>
-          <!-- <div class="carousel-item">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="top"
+                data-interval="4000"
+              >
+                <img
+                  src="/img/BANNER_1_SITE.png"
+                  alt="Banner 1"
+                  class="d-block w-100"
+                />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="top"
+                data-interval="5200"
+              >
+                <img
+                  src="/img/bannergif.gif"
+                  alt="Banner 2"
+                  class="d-block w-100"
+                />
+              </a>
+            </div>
+            <!-- <div class="carousel-item">
                 <a href="" data-toggle="tooltip" data-placement="top" data-interval="4000">
                     <img src="" alt="Banner 3" class="d-block w-100">
                 </a>
             </div>
         </div> -->
 
-          <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-          </a>
-          <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-          </a>
+            <a
+              class="carousel-control-prev"
+              href="#bannerCarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#bannerCarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div id="section-anuncios" class="content-section">
-        <section class="web-stories">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12 webstories__wrapper">
-                <div class="imgstories">
-                  <img src="/img/33a14dbfc3404062ad526859609e547b.png" alt="Web Story">
-                </div>
-                <div class="webstories__text">QUEM SOMOS</div>
-              </div>
-
-              <div id="section-atualizacoes" class="content-section">
-                <div class="col-xs-12 webstories__wrapper1">
+        <div id="section-anuncios" class="content-section">
+          <section class="web-stories">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 webstories__wrapper">
                   <div class="imgstories">
-                    <img src="/img/Pngtreerefresh_icon_graphic_design_template_4766732.png" alt="Web Story">
+                    <img
+                      src="/img/33a14dbfc3404062ad526859609e547b.png"
+                      alt="Web Story"
+                    />
                   </div>
-                  <div class="webstories__text1">ATUALIZAÇÕES</div>
+                  <div class="webstories__text">QUEM SOMOS</div>
                 </div>
-              </div>
 
-              <div class="col-xs-12 webstories__wrapper2">
-                <div class="imgstories">
-                  <img src="/img/symbole-de-nouvelles-jaune.png" alt="Web Story">
+                <div id="section-atualizacoes" class="content-section">
+                  <div class="col-xs-12 webstories__wrapper1">
+                    <div class="imgstories">
+                      <img
+                        src="/img/Pngtreerefresh_icon_graphic_design_template_4766732.png"
+                        alt="Web Story"
+                      />
+                    </div>
+                    <div class="webstories__text1">ATUALIZAÇÕES</div>
+                  </div>
                 </div>
-                <div class="webstories__text2">NOTÍCIAS</div>
+
+                <div class="col-xs-12 webstories__wrapper2">
+                  <div class="imgstories">
+                    <img
+                      src="/img/symbole-de-nouvelles-jaune.png"
+                      alt="Web Story"
+                    />
+                  </div>
+                  <div class="webstories__text2">NOTÍCIAS</div>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
-    </div>
 
-    <div id="section-nossas-salas" class="content-section">
-      <div id="card" class="card card--horizontal card--featured card--text-big">
-        <div class="card__wrapper">
-          <!-- Parte da imagem -->
-          <div class="card__image">
-            <a class="card__image__anchor  analytics-featured" href="" data-featured-index="1"></a>
-            <div class="card__image__category">
-              <span class="card__image__category__name">Sala Disponível</span>
-              <span class="ico--video card__image__category__ico"></span>
+      <div id="section-nossas-salas" class="content-section">
+        <div
+          id="card"
+          class="card card--horizontal card--featured card--text-big"
+        >
+          <div class="card__wrapper">
+            <!-- Parte da imagem -->
+            <div class="card__image">
+              <a
+                class="card__image__anchor analytics-featured"
+                href=""
+                data-featured-index="1"
+              ></a>
+              <div class="card__image__category">
+                <span class="card__image__category__name">Sala Disponível</span>
+                <span class="ico--video card__image__category__ico"></span>
+              </div>
             </div>
-          </div>
-          <div class="text-center">
-            <!-- Parte do texto -->
-            <div class="card__content card__content--background-orange">
-              <div class="card__content__wrapper">
-                <a href="https://www.haxball.com/play?c=s8E2NUWeq48" class="card__content__title  analytics-featured"
-                  data-featured-index="1">🩸 BORE ARENE 🩸 | X3 | FUTSAL</a>
-                <p class="card__content__description"><a href=""></a> </p>
-                <ul class="card__content__sublist">
-                  <li class="card__content__sublist__item"><a href=""></a></li>
-                </ul>
+            <div class="text-center">
+              <!-- Parte do texto -->
+              <div class="card__content card__content--background-orange">
+                <div class="card__content__wrapper">
+                  <a
+                    href="https://www.haxball.com/play?c=s8E2NUWeq48"
+                    class="card__content__title analytics-featured"
+                    data-featured-index="1"
+                    >🩸 BORE ARENE 🩸 | X3 | FUTSAL</a
+                  >
+                  <p class="card__content__description"><a href=""></a></p>
+                  <ul class="card__content__sublist">
+                    <li class="card__content__sublist__item">
+                      <a href=""></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-
-
-
-    <div id="section-temporadas" class="content-section">
-      <div class="container mt-5">
-        <h2>TEMPORADAS:</h2>
-        <form id="seasonForm" class="mb-3">
-          <div class="form-row">
-            <div class="col-md-3 mb-3">
-              <label for="selectMonth">Mês:</label>
-              <select id="selectMonth" class="form-control">
-                <option value="0">Todos os meses</option>
-                <option value="1">Janeiro</option>
-                <option value="2">Fevereiro</option>
-                <option value="3">Março</option>
-                <option value="4">Abril</option>
-                <option value="5">Maio</option>
-                <option value="6">Junho</option>
-                <option value="7">Julho</option>
-                <option value="8">Agosto</option>
-                <option value="9">Setembro</option>
-                <option value="10">Outubro</option>
-                <option value="11">Novembro</option>
-                <option value="12">Dezembro</option>
-              </select>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="selectYear">Ano:</label>
-              <select id="selectYear" class="form-control">
-                <option value="0">Todos os anos</option>
-                <!-- <option value="2026"></option>
+      <div id="section-temporadas" class="content-section">
+        <div class="container mt-5">
+          <h2>TEMPORADAS:</h2>
+          <form id="seasonForm" class="mb-3">
+            <div class="form-row">
+              <div class="col-md-3 mb-3">
+                <label for="selectMonth">Mês:</label>
+                <select id="selectMonth" class="form-control">
+                  <option value="0">Todos os meses</option>
+                  <option value="1">Janeiro</option>
+                  <option value="2">Fevereiro</option>
+                  <option value="3">Março</option>
+                  <option value="4">Abril</option>
+                  <option value="5">Maio</option>
+                  <option value="6">Junho</option>
+                  <option value="7">Julho</option>
+                  <option value="8">Agosto</option>
+                  <option value="9">Setembro</option>
+                  <option value="10">Outubro</option>
+                  <option value="11">Novembro</option>
+                  <option value="12">Dezembro</option>
+                </select>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="selectYear">Ano:</label>
+                <select id="selectYear" class="form-control">
+                  <option value="0">Todos os anos</option>
+                  <!-- <option value="2026"></option>
                 <option value="2025"></option> -->
-                <option value="2024">2024</option>
+                  <option value="2024">2024</option>
+                </select>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="selectCategory">Categoria:</label>
+                <select id="selectCategory" class="form-control">
+                  <option value="gols">Gols</option>
+                  <option value="assistencias">Assistências</option>
+                  <option value="jogosSemSofrerGols">
+                    Partidas sem sofrer gols
+                  </option>
+                  <option value="vitorias">Vitórias</option>
+                  <option value="partidasJogadas">Partidas jogadas</option>
+                </select>
+              </div>
+              <div style="top: 31px" class="col-md-3 mb-3">
+                <button
+                  style="background-color: black; border: black"
+                  type="submit"
+                  class="btn btn-primary btn-block"
+                >
+                  Filtrar
+                </button>
+              </div>
+            </div>
+          </form>
 
-              </select>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="selectCategory">Categoria:</label>
-              <select id="selectCategory" class="form-control">
-                <option value="gols">Gols</option>
-                <option value="assistencias">Assistências</option>
-                <option value="jogosSemSofrerGols">Partidas sem sofrer gols</option>
-                <option value="vitorias">Vitórias</option>
-                <option value="partidasJogadas">Partidas jogadas</option>
-              </select>
-            </div>
-            <div style="top: 31px;" class="col-md-3 mb-3">
-              <button style="background-color: black; border: black " type="submit"
-                class="btn btn-primary btn-block">Filtrar</button>
-            </div>
+          <div id="seasonCards" class="row">
+            <!--cards dinamicamente -->
           </div>
-        </form>
+        </div>
 
         <div id="seasonCards" class="row">
-          <!--cards dinamicamente -->
+          <!-- cards dinamicamente -->
         </div>
       </div>
+    </div>
 
-      <div id="seasonCards" class="row">
-        <!-- cards dinamicamente -->
+    <div id="section-campeonatos" class="content-section">
+      <div class="container mt-5">
+        <h2>Campeonatos</h2>
+        <div class="row" id="campeonatosContainer">
+          <!-- Cards de campeonato serão inseridos dinamicamente aqui -->
+        </div>
       </div>
     </div>
-  </div>
 
-
-
-  <div id="section-campeonatos" class="content-section">
-    <div class="container mt-5">
-      <h2>Campeonatos</h2>
-      <div class="row" id="campeonatosContainer">
-        <!-- Cards de campeonato serão inseridos dinamicamente aqui -->
+    <div
+      class="modal fade"
+      id="modalRegras-Campeonato-1"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalRegrasLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalRegrasLabel">
+              Regras do Campeonato 1
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Fechar"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Regra específica 1</li>
+              <li>Regra específica 2</li>
+              <li>Regra específica 3</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="modalRegras-Campeonato-1" tabindex="-1" role="dialog" aria-labelledby="modalRegrasLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="modalRegrasLabel">Regras do Campeonato 1</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-        <span aria-hidden="true">&times;</span>
-      </button>
+    <div
+      class="modal fade"
+      id="modalRegras-Campeonato-2"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalRegrasLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalRegrasLabel">
+              Regras do Campeonato 2
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Fechar"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Regra específica A</li>
+              <li>Regra específica B</li>
+              <li>Regra específica C</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="modal-body">
-      <ul>
-        <li>Regra específica 1</li>
-        <li>Regra específica 2</li>
-        <li>Regra específica 3</li>
-      </ul>
+
+    <div
+      class="modal fade"
+      id="modalRegras-Campeonato-3"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalRegrasLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalRegrasLabel">
+              Regras do Campeonato 3
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Fechar"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Regra específica D</li>
+              <li>Regra específica E</li>
+              <li>Regra específica F</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-    </div>
-  </div>
-</div>
-</div>
 
-<div class="modal fade" id="modalRegras-Campeonato-2" tabindex="-1" role="dialog" aria-labelledby="modalRegrasLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="modalRegrasLabel">Regras do Campeonato 2</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <ul>
-        <li>Regra específica A</li>
-        <li>Regra específica B</li>
-        <li>Regra específica C</li>
-      </ul>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="modal fade" id="modalRegras-Campeonato-3" tabindex="-1" role="dialog" aria-labelledby="modalRegrasLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="modalRegrasLabel">Regras do Campeonato 3</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <ul>
-        <li>Regra específica D</li>
-        <li>Regra específica E</li>
-        <li>Regra específica F</li>
-      </ul>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-    </div>
-  </div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-  <div id="section-vip" class="content-section">
-    <div class="caixa-vip mt-5">
-      <h2>Planos VIP</h2>
-      <div class="row">
-        <div class="col-md-4 vip-plan" data-plan="basic" data-payment-page="/pagamento/pagamentovip.html">
-          <div class="vipcard">
-            <div class="card-body text-center">
-              <h5 class="card-title">VIP</h5>
-              <p class="card-text">Descrição do Plano Vip.</p>
+    <div id="section-vip" class="content-section">
+      <div class="caixa-vip mt-5">
+        <h2>Planos VIP</h2>
+        <div class="row">
+          <div
+            class="col-md-4 vip-plan"
+            data-plan="basic"
+            data-payment-page="/pagamento/pagamentovip.html"
+          >
+            <div class="vipcard">
+              <div class="card-body text-center">
+                <h5 class="card-title">VIP</h5>
+                <p class="card-text">Descrição do Plano Vip.</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 vip-plan"
+            data-plan="premium"
+            data-payment-page="/pagamento/pagamentopremium.html"
+          >
+            <div class="vipcard">
+              <div class="card-body text-center">
+                <h5 class="card-title">Premium</h5>
+                <p class="card-text">Descrição do Plano Premium.</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 vip-plan"
+            data-plan="ultimate"
+            data-payment-page="/pagamento/pagamentoLegend.html"
+          >
+            <div class="vipcard">
+              <div class="card-body text-center">
+                <h5 class="card-title">Legend</h5>
+                <p class="card-text">Descrição do Plano Legend.</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4 vip-plan" data-plan="premium" data-payment-page="/pagamento/pagamentopremium.html">
-          <div class="vipcard">
-            <div class="card-body text-center">
-              <h5 class="card-title">Premium</h5>
-              <p class="card-text">Descrição do Plano Premium.</p>
+        <div class="mt-5">
+          <h3>Especificações do Plano</h3>
+          <div id="planDetails" class="plan-details-card">
+            <!-- Detalhes do plano serão inseridos aqui -->
+          </div>
+          <form id="vipForm" class="mt-3">
+            <div class="form-group">
+              <label for="discordNick">Nick no Discord:</label>
+              <input
+                type="text"
+                id="discordNick"
+                class="form-control"
+                required
+              />
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 vip-plan" data-plan="ultimate" data-payment-page="/pagamento/pagamentoLegend.html">
-          <div class="vipcard">
-            <div class="card-body text-center">
-              <h5 class="card-title">Legend</h5>
-              <p class="card-text">Descrição do Plano Legend.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mt-5">
-        <h3>Especificações do Plano</h3>
-        <div id="planDetails" class="plan-details-card">
-          <!-- Detalhes do plano serão inseridos aqui -->
-        </div>
-        <form id="vipForm" class="mt-3">
-          <div class="form-group">
-            <label for="discordNick">Nick no Discord:</label>
-            <input type="text" id="discordNick" class="form-control" required>
-          </div>
-          <button style="background-color: black;  border: black" type="submit" class="btn btn-primary btn-block"
-            id="goToPayment">Ir para Pagamento</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-
-
-  <footer class="rodape">
-    <div class="container">
-      <div class="row1">
-        <div class="col-md-6">
-          <p class="rodape-texto">Bore Haxball. Todos os Direitos Reservados.</p>
-        </div>
-        <div class="col-md-6 text-md-right">
-          <ul class="redes-sociais">
-            <li><a href="https://discord.gg/3UB4by6jv2"><i class="fab fa-discord"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-          </ul>
+            <button
+              style="background-color: black; border: black"
+              type="submit"
+              class="btn btn-primary btn-block"
+              id="goToPayment"
+            >
+              Ir para Pagamento
+            </button>
+          </form>
         </div>
       </div>
     </div>
-  </footer>
-  
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a0c7b1d78d.js" crossorigin="anonymous"></script>
 
+    <script>
+      const seasonsData = [
+        {
+          month: 1,
+          year: 2024,
+          title: "Temporada 1",
+          jogadores: [
+            // Gols
+            { nome: "Kristofer", categoria: "gols", valor: 18 },
+            { nome: "Kristofer", categoria: "gols", valor: 16 },
+            { nome: "Kristofer", categoria: "gols", valor: 14 },
+            { nome: "Kristofer", categoria: "gols", valor: 12 },
+            { nome: "Kristofer", categoria: "gols", valor: 10 },
 
+            // Assistências
+            { nome: "Maria", categoria: "assistencias", valor: 15 },
 
+            // Vitórias
+            { nome: "Ana", categoria: "vitorias", valor: 5 },
 
+            // Partidas Jogadas
+            { nome: "Pedro", categoria: "partidasJogadas", valor: 20 },
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            // Partidas Sem Sofrer Gols
+            { nome: "Pedro", categoria: "jogosSemSofrerGols", valor: 20 },
+          ],
+        },
+        {
+          month: 2,
+          year: 2024,
+          title: "Temporada 2",
+          jogadores: [
+            // Gols
+            // Assistências
+            // Vitórias
+            // Partidas Jogadas
+            // Partidas Sem Sofrer Gols
+          ],
+        },
+      ];
 
+      function generateSeasonCards(month, year, category) {
+        // Filtrar as temporadas baseadas no mês e ano selecionados
+        let filteredSeasons = seasonsData;
 
-  <script>
-    const seasonsData = [
-      {
-        month: 1,
-        year: 2024,
-        title: 'Temporada 1',
-        jogadores: [
-          // Gols
-          { nome: 'Kristofer', categoria: 'gols', valor: 18 },
-          { nome: 'Kristofer', categoria: 'gols', valor: 16 },
-          { nome: 'Kristofer', categoria: 'gols', valor: 14 },
-          { nome: 'Kristofer', categoria: 'gols', valor: 12 },
-          { nome: 'Kristofer', categoria: 'gols', valor: 10 },
+        if (month !== 0) {
+          filteredSeasons = filteredSeasons.filter(
+            (season) => season.month === month
+          );
+        }
+        if (year !== 0) {
+          filteredSeasons = filteredSeasons.filter(
+            (season) => season.year === year
+          );
+        }
 
-          // Assistências
-          { nome: 'Maria', categoria: 'assistencias', valor: 15 },
+        // Selecionar o contêiner onde os cards serão inseridos
+        const seasonCardsContainer = document.getElementById("seasonCards");
+        seasonCardsContainer.innerHTML = ""; // Limpar conteúdo existente
 
-          // Vitórias
-          { nome: 'Ana', categoria: 'vitorias', valor: 5 },
+        // Iterar sobre as temporadas filtradas e criar os cards dinamicamente
+        filteredSeasons.forEach((season) => {
+          const jogadoresFiltrados = season.jogadores.filter(
+            (jogador) => jogador.categoria === category
+          );
 
-          // Partidas Jogadas
-          { nome: 'Pedro', categoria: 'partidasJogadas', valor: 20 },
-
-          // Partidas Sem Sofrer Gols
-          { nome: 'Pedro', categoria: 'jogosSemSofrerGols', valor: 20 },
-
-        ]
-      },
-      {
-        month: 2,
-        year: 2024,
-        title: 'Temporada 2',
-        jogadores: [
-          // Gols
-
-          // Assistências
-
-          // Vitórias
-
-          // Partidas Jogadas
-
-          // Partidas Sem Sofrer Gols
-
-        ]
-      },
-
-    ];
-
-    function generateSeasonCards(month, year, category) {
-      // Filtrar as temporadas baseadas no mês e ano selecionados
-      let filteredSeasons = seasonsData;
-
-      if (month !== 0) {
-        filteredSeasons = filteredSeasons.filter(season => season.month === month);
-      }
-      if (year !== 0) {
-        filteredSeasons = filteredSeasons.filter(season => season.year === year);
-      }
-
-      // Selecionar o contêiner onde os cards serão inseridos
-      const seasonCardsContainer = document.getElementById('seasonCards');
-      seasonCardsContainer.innerHTML = ''; // Limpar conteúdo existente
-
-      // Iterar sobre as temporadas filtradas e criar os cards dinamicamente
-      filteredSeasons.forEach(season => {
-        const jogadoresFiltrados = season.jogadores.filter(jogador => jogador.categoria === category);
-
-        if (jogadoresFiltrados.length > 0) {
-          const cardHtml = `
+          if (jogadoresFiltrados.length > 0) {
+            const cardHtml = `
         <div class="col-md-4 mb-4">
           <div class="card-season">
             <div class="card-body">
               <h5 class="card-title">${season.title}</h5>
-              ${jogadoresFiltrados.map((jogador, index) => `
-                <p style="font-size: 18px" class="card-text">${index + 1}º | ${jogador.nome}: ${jogador.valor}</p>
-              `).join('')}
+              ${jogadoresFiltrados
+                .map(
+                  (jogador, index) => `
+                <p style="font-size: 18px" class="card-text">${index + 1}º | ${
+                    jogador.nome
+                  }: ${jogador.valor}</p>
+              `
+                )
+                .join("")}
             </div>
           </div>
         </div>
       `;
-          seasonCardsContainer.insertAdjacentHTML('beforeend', cardHtml);
+            seasonCardsContainer.insertAdjacentHTML("beforeend", cardHtml);
+          }
+        });
+
+        // Se não houver temporadas para o filtro selecionado, exibir mensagem
+        if (
+          filteredSeasons.length === 0 ||
+          seasonCardsContainer.innerHTML === ""
+        ) {
+          seasonCardsContainer.innerHTML =
+            '<p class="text-center">Nenhuma temporada encontrada para este filtro.</p>';
+        }
+      }
+
+      document
+        .getElementById("seasonForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Evitar o envio padrão do formulário
+
+          const selectedMonth = parseInt(
+            document.getElementById("selectMonth").value
+          );
+          const selectedYear = parseInt(
+            document.getElementById("selectYear").value
+          );
+          const selectedCategory =
+            document.getElementById("selectCategory").value;
+
+          generateSeasonCards(selectedMonth, selectedYear, selectedCategory);
+        });
+
+      // Inicialmente, gerar os cards com todos os dados
+      generateSeasonCards(0, 0, "gols");
+    </script>
+
+    <script>
+      // Função para navegar entre as seções e controlar a visibilidade
+      function navigateToSection(sectionId) {
+        // Atualizar a URL sem recarregar a página
+        history.pushState(null, "", sectionId);
+
+        // Esconder todas as seções principais
+        $(".content-section").hide();
+
+        // Mostrar a seção correspondente com base no ID
+        if (sectionId === "#section-nossas-salas") {
+          $("#section-nossas-salas").show();
+        } else if (sectionId === "#section-temporadas") {
+          $("#section-temporadas").show();
+        } else if (sectionId === "#section-anuncios") {
+          $("#section-anuncios").show();
+        } else if (sectionId === "#section-atualizacoes") {
+          $("#section-atualizacoes").show();
+        } else if (sectionId === "#section-campeonatos") {
+          $("#section-campeonatos").show();
+        } else if (sectionId === "#section-sejavip") {
+          $("#section-sejavip").show();
+        }
+
+        // Caso especial
+        if (sectionId === "#section-anuncios") {
+          $("#section-anuncios").show();
+          $("#section-atualizacoes").show();
+        } else if (sectionId === "#section-atualizacoes") {
+          $("#section-anuncios").show();
+          $("#section-atualizacoes").show();
+        }
+      }
+
+      // Adicionar eventos de clique aos elementos para navegar entre seções
+      $(document).ready(function () {
+        $("#nossas-salas").click(function () {
+          navigateToSection("#section-nossas-salas");
+        });
+
+        $("#temporadas").click(function () {
+          navigateToSection("#section-temporadas");
+        });
+
+        $("#anuncios").click(function () {
+          navigateToSection("#section-anuncios");
+        });
+
+        $("#atualizacoes").click(function () {
+          navigateToSection("#section-atualizacoes");
+        });
+
+        $("#campeonatos").click(function () {
+          navigateToSection("#section-campeonatos");
+        });
+
+        $("#sejavip").click(function () {
+          navigateToSection("#section-sejavip");
+        });
+
+        // Verificar a URL atual ao carregar a página
+        const currentPath = window.location.hash;
+        if (currentPath) {
+          navigateToSection(currentPath);
+        } else {
+          // Mostrar uma seção padrão se não houver hash na URL
+          $("#section-nossas-salas").show();
         }
       });
+    </script>
 
-      // Se não houver temporadas para o filtro selecionado, exibir mensagem
-      if (filteredSeasons.length === 0 || seasonCardsContainer.innerHTML === '') {
-        seasonCardsContainer.innerHTML = '<p class="text-center">Nenhuma temporada encontrada para este filtro.</p>';
-      }
-    }
+    <script>
+      const vipPlans = {
+        basic: {
+          title: "VIP",
+          description: [
+            "Cor exclusiva no chat",
+            "Permissão de Pause e Despause",
+            "Cargo Customizado",
+          ],
+          price: "R$ 5,00",
+          paymentPage: "/pagamento/pagamentovip.html",
+        },
+        premium: {
+          title: "Premium",
+          description: ["Cores exclusivas no chat", "Furar fila"],
+          price: "R$ 8,00",
+          paymentPage: "/pagamento/pagamentopremium.html",
+        },
+        ultimate: {
+          title: "Legend",
+          description: [
+            "Cores exclusivas no chat",
+            "Troca fila",
+            "Comando de pause !p",
+            "Reseta a Bola",
+          ],
+          price: "R$ 12,00",
+          paymentPage: "/pagamento/pagamentoLegend.html",
+        },
+      };
 
-    document.getElementById('seasonForm').addEventListener('submit', function (event) {
-      event.preventDefault(); // Evitar o envio padrão do formulário
-
-      const selectedMonth = parseInt(document.getElementById('selectMonth').value);
-      const selectedYear = parseInt(document.getElementById('selectYear').value);
-      const selectedCategory = document.getElementById('selectCategory').value;
-
-      generateSeasonCards(selectedMonth, selectedYear, selectedCategory);
-    });
-
-    // Inicialmente, gerar os cards com todos os dados
-    generateSeasonCards(0, 0, 'gols');
-
-
-
-
-
-  </script>
-
-
-
-
-  <script>
-    // Função para navegar entre as seções e controlar a visibilidade
-    function navigateToSection(sectionId) {
-      // Atualizar a URL sem recarregar a página
-      history.pushState(null, '', sectionId);
-
-      // Esconder todas as seções principais
-      $('.content-section').hide();
-
-      // Mostrar a seção correspondente com base no ID
-      if (sectionId === '#section-nossas-salas') {
-        $('#section-nossas-salas').show();
-
-      } else if (sectionId === '#section-temporadas') {
-        $('#section-temporadas').show();
-
-      } else if (sectionId === '#section-anuncios') {
-        $('#section-anuncios').show();
-
-      } else if (sectionId === '#section-atualizacoes') {
-        $('#section-atualizacoes').show();
-
-      } else if (sectionId === '#section-campeonatos') {
-        $('#section-campeonatos').show();
-
-      } else if (sectionId === '#section-sejavip') {
-        $('#section-sejavip').show();
+      // Função para verificar se o campo de Nick do Discord está preenchido
+      function isDiscordNickFilled() {
+        const discordNick = document.getElementById("discordNick").value.trim();
+        return discordNick !== "";
       }
 
-      // Caso especial 
-      if (sectionId === '#section-anuncios') {
-        $('#section-anuncios').show();
-        $('#section-atualizacoes').show();
-      } else if (sectionId === '#section-atualizacoes') {
-        $('#section-anuncios').show();
-        $('#section-atualizacoes').show();
+      // Função para mostrar os detalhes do plano VIP
+      function showPlanDetails(plan) {
+        const planDetailsContainer = document.getElementById("planDetails");
+        const planDetails = vipPlans[plan];
 
-      }
-    }
+        const descriptionList = planDetails.description
+          .map((item) => `<li>${item}</li>`)
+          .join("");
 
-
-    // Adicionar eventos de clique aos elementos para navegar entre seções
-    $(document).ready(function () {
-      $('#nossas-salas').click(function () {
-        navigateToSection('#section-nossas-salas');
-      });
-
-      $('#temporadas').click(function () {
-        navigateToSection('#section-temporadas');
-      });
-
-      $('#anuncios').click(function () {
-        navigateToSection('#section-anuncios');
-      });
-
-      $('#atualizacoes').click(function () {
-        navigateToSection('#section-atualizacoes');
-      });
-
-      $('#campeonatos').click(function () {
-        navigateToSection('#section-campeonatos');
-      });
-
-      $('#sejavip').click(function () {
-        navigateToSection('#section-sejavip');
-      });
-
-      // Verificar a URL atual ao carregar a página
-      const currentPath = window.location.hash;
-      if (currentPath) {
-        navigateToSection(currentPath);
-      } else {
-        // Mostrar uma seção padrão se não houver hash na URL
-        $('#section-nossas-salas').show();
-      }
-    });
-
-  </script>
-
-  <script>
-
-    const vipPlans = {
-      basic: {
-        title: "VIP",
-        description: [
-          "Cor exclusiva no chat",
-          "Permissão de Pause e Despause",
-          "Cargo Customizado",
-        ],
-        price: "R$ 5,00",
-        paymentPage: "/pagamento/pagamentovip.html"
-      },
-      premium: {
-        title: "Premium",
-        description: [
-          "Cores exclusivas no chat",
-          "Furar fila",
-        ],
-        price: "R$ 8,00",
-        paymentPage: "/pagamento/pagamentopremium.html"
-      },
-      ultimate: {
-        title: "Legend",
-        description: [
-          "Cores exclusivas no chat",
-          "Troca fila",
-          "Comando de pause !p",
-          "Reseta a Bola"
-        ],
-        price: "R$ 12,00",
-        paymentPage: "/pagamento/pagamentoLegend.html"
-      }
-    };
-
-    // Função para verificar se o campo de Nick do Discord está preenchido
-    function isDiscordNickFilled() {
-      const discordNick = document.getElementById('discordNick').value.trim();
-      return discordNick !== '';
-    }
-
-    // Função para mostrar os detalhes do plano VIP
-    function showPlanDetails(plan) {
-      const planDetailsContainer = document.getElementById('planDetails');
-      const planDetails = vipPlans[plan];
-
-      const descriptionList = planDetails.description.map(item => `<li>${item}</li>`).join('');
-
-      planDetailsContainer.innerHTML = `
+        planDetailsContainer.innerHTML = `
     <h4>${planDetails.title}</h4>
     <ul>${descriptionList}</ul>
     <p><strong>Preço: ${planDetails.price}</strong></p>
   `;
 
-      // Adicionar evento de clique ao botão "Ir para Pagamento"
-      document.getElementById('goToPayment').addEventListener('click', function (event) {
-        event.preventDefault(); // Evitar comportamento padrão do formulário
+        // Adicionar evento de clique ao botão "Ir para Pagamento"
+        document
+          .getElementById("goToPayment")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Evitar comportamento padrão do formulário
 
-        // Verificar se o campo de Nick do Discord está preenchido
-        if (isDiscordNickFilled()) {
-          // Encontrar o plano selecionado
-          const selectedPlanId = document.querySelector('.vip-plan.active');
+            // Verificar se o campo de Nick do Discord está preenchido
+            if (isDiscordNickFilled()) {
+              // Encontrar o plano selecionado
+              const selectedPlanId = document.querySelector(".vip-plan.active");
 
-          if (selectedPlanId) {
-            const selectedPlan = vipPlans[selectedPlanId.getAttribute('data-plan')];
+              if (selectedPlanId) {
+                const selectedPlan =
+                  vipPlans[selectedPlanId.getAttribute("data-plan")];
 
-            // Redirecionar para a página de pagamento do plano selecionado
-            if (selectedPlan && selectedPlan.paymentPage) {
-              window.location.href = selectedPlan.paymentPage;
+                // Redirecionar para a página de pagamento do plano selecionado
+                if (selectedPlan && selectedPlan.paymentPage) {
+                  window.location.href = selectedPlan.paymentPage;
+                } else {
+                  console.error(
+                    "Plano não encontrado ou página de pagamento não especificada."
+                  );
+                }
+              } else {
+                console.error("Nenhum plano selecionado.");
+              }
             } else {
-              console.error("Plano não encontrado ou página de pagamento não especificada.");
+              // Exibir mensagem de alerta para preencher o Nick do Discord
+              alert(
+                "Por favor, insira seu Nick no Discord antes de prosseguir para o pagamento."
+              );
             }
-          } else {
-            console.error("Nenhum plano selecionado.");
-          }
-        } else {
-          // Exibir mensagem de alerta para preencher o Nick do Discord
-          alert("Por favor, insira seu Nick no Discord antes de prosseguir para o pagamento.");
-        }
+          });
+      }
+
+      // Adicionar eventos de clique aos planos VIP
+      document.querySelectorAll(".vip-plan").forEach((planElement) => {
+        planElement.addEventListener("click", function () {
+          // Remover a classe 'active' de todos os planos
+          document
+            .querySelectorAll(".vip-plan")
+            .forEach((el) => el.classList.remove("active"));
+
+          // Adicionar a classe 'active' ao plano clicado
+          this.classList.add("active");
+
+          // Mostrar os detalhes do plano clicado
+          const plan = this.getAttribute("data-plan");
+          showPlanDetails(plan);
+        });
       });
-    }
+    </script>
 
-    // Adicionar eventos de clique aos planos VIP
-    document.querySelectorAll('.vip-plan').forEach(planElement => {
-      planElement.addEventListener('click', function () {
-        // Remover a classe 'active' de todos os planos
-        document.querySelectorAll('.vip-plan').forEach(el => el.classList.remove('active'));
+    <script>
+      const campeonatosData = [
+        {
+          nome: "Campeonato 1",
+          descricao: "",
+          imagemFundo: "/img/bannergif.gif",
+          status: "andamento", // Exemplo de status, pode ser qualquer valor definido por você
+          inscricoesAbertas: true,
+          statusManual: "Em Andamento",
+        },
+        {
+          nome: "Campeonato 2",
+          descricao: "",
+          imagemFundo: "caminho/para/imagem2.jpg",
+          status: "finalizado",
+          inscricoesAbertas: false,
+          statusManual: "Finalizado",
+        },
+        {
+          nome: "Campeonato 3",
+          descricao: "",
+          imagemFundo: "caminho/para/imagem3.jpg",
+          status: "andamento",
+          inscricoesAbertas: true,
+          statusManual: "Inscrições Abertas",
+        },
+      ];
 
-        // Adicionar a classe 'active' ao plano clicado
-        this.classList.add('active');
+      function renderCampeonatos() {
+        const campeonatosContainer = document.getElementById(
+          "campeonatosContainer"
+        );
+        campeonatosContainer.innerHTML = ""; // Limpar conteúdo existente
 
-        // Mostrar os detalhes do plano clicado
-        const plan = this.getAttribute('data-plan');
-        showPlanDetails(plan);
-      });
-    });
+        campeonatosData.forEach((campeonato) => {
+          // Definir o status com base no statusManual, se estiver definido, caso contrário, usar regras padrão
+          const status =
+            campeonato.statusManual ||
+            (campeonato.status === "finalizado"
+              ? "Finalizado"
+              : campeonato.inscricoesAbertas
+              ? "Inscrições Abertas"
+              : "Em Andamento");
 
-
-  </script>
-
-<script>
-
-
-const campeonatosData = [
-  {
-    nome: 'Campeonato 1',
-    descricao: '',
-     imagemFundo: '/img/bannergif.gif',
-    status: 'andamento', // Exemplo de status, pode ser qualquer valor definido por você
-    inscricoesAbertas: true,
-    statusManual: 'Em Andamento' 
-  },
-  {
-    nome: 'Campeonato 2',
-     descricao: '',
-    imagemFundo: 'caminho/para/imagem2.jpg',
-    status: 'finalizado',
-    inscricoesAbertas: false,
-    statusManual: 'Finalizado' 
-  },
-  {
-    nome: 'Campeonato 3',
-    descricao: '',
-     imagemFundo: 'caminho/para/imagem3.jpg',
-    status: 'andamento',
-    inscricoesAbertas: true,
-    statusManual: 'Inscrições Abertas' 
-  }
-];
-
-function renderCampeonatos() {
-  const campeonatosContainer = document.getElementById('campeonatosContainer');
-  campeonatosContainer.innerHTML = ''; // Limpar conteúdo existente
-
-  campeonatosData.forEach(campeonato => {
-    // Definir o status com base no statusManual, se estiver definido, caso contrário, usar regras padrão
-    const status = campeonato.statusManual || (campeonato.status === 'finalizado' ? 'Finalizado' : (campeonato.inscricoesAbertas ? 'Inscrições Abertas' : 'Em Andamento'));
-
-    // Construir o HTML do card com o status definido
-    const cardHtml = `
+          // Construir o HTML do card com o status definido
+          const cardHtml = `
       <div class="col-md-4">
         <div class="card-campeonato">
           <div class="card-background">
@@ -719,7 +842,9 @@ function renderCampeonatos() {
           <div class="card-overlay">
             <!-- Conteúdo opcional para sobreposição -->
           </div>
-          <!--<img src="${campeonato.imagemIcone}" class="icon-center" alt="Ícone do campeonato">-->
+          <!--<img src="${
+            campeonato.imagemIcone
+          }" class="icon-center" alt="Ícone do campeonato">-->
           <div class="card-body">
             <h5 class="card-title">${campeonato.nome}</h5>
             <p class="card-text">${campeonato.descricao}</p>
@@ -727,7 +852,10 @@ function renderCampeonatos() {
               <span class="card__image__category__name">${status}</span>
               <span class="ico--video card__image__category__ico"></span>
             </div>
-             <button style="background-color: black;  border: black" class="btn btn-vermais" data-toggle="modal" data-target="#modalRegras-${campeonato.nome.replace(/\s+/g, '-')}">
+             <button style="background-color: black;  border: black" class="btn btn-vermais" data-toggle="modal" data-target="#modalRegras-${campeonato.nome.replace(
+               /\s+/g,
+               "-"
+             )}">
           Ver mais
         </button>
           </div>
@@ -735,28 +863,22 @@ function renderCampeonatos() {
       </div>
     `;
 
-    campeonatosContainer.insertAdjacentHTML('beforeend', cardHtml);
-  });
-}
+          campeonatosContainer.insertAdjacentHTML("beforeend", cardHtml);
+        });
+      }
 
-// Chamada inicial para renderizar os cards de campeonato
-renderCampeonatos();
+      // Chamada inicial para renderizar os cards de campeonato
+      renderCampeonatos();
 
+      // Adicionar evento de clique ao botão "Ver mais"
+      document.querySelectorAll(".card-campeonato .btn").forEach((btn) => {
+        btn.addEventListener("click", function (event) {
+          event.preventDefault(); // Evitar o comportamento padrão de seguir o link
 
-
-// Adicionar evento de clique ao botão "Ver mais"
-document.querySelectorAll('.card-campeonato .btn').forEach(btn => {
-  btn.addEventListener('click', function(event) {
-    event.preventDefault(); // Evitar o comportamento padrão de seguir o link
-
-    // Exibir o modal de regras
-    $('#modalRegras').modal('show');
-  });
-});
-
-</script>
-
-
-</body>
-
+          // Exibir o modal de regras
+          $("#modalRegras").modal("show");
+        });
+      });
+    </script>
+  </body>
 </html>
