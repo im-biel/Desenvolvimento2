@@ -948,21 +948,21 @@ body {
     text-align: center;
     align-items: center;
     width: 17vw; /* Ajustado para largura relativa */
-    height: 42vh; /* Ajustado para altura relativa */
+    height: 37vh; /* Ajustado para altura relativa */
     margin: 0 auto; /* Centraliza horizontalmente */
 }
 .webstories__wrapper1 {
     text-align: center;
     align-items: center;
     width: 17vw; 
-    height:  42vh; 
+    height: 37vh; 
     margin: 0 auto; 
 }
 .webstories__wrapper2 {
     text-align: center;
     align-items: center;
     width: 17vw; /* Ajustado para largura relativa */
-    height:  42vh; /* Ajustado para altura relativa */
+    height: 37vh; /* Ajustado para altura relativa */
     margin: 0 auto; /* Centraliza horizontalmente */
 }
 .card {
