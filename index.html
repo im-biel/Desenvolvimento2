@@ -918,6 +918,72 @@ document.getElementById("vipForm").addEventListener("submit", function (event) {
 
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const vipForm = document.getElementById('vipForm');
+  const vipPlans = document.querySelectorAll('.vip-plan');
+  const planInput = document.getElementById('plan');
+  let selectedPlan = null;
+
+  vipPlans.forEach(plan => {
+    plan.addEventListener('click', () => {
+      selectedPlan = plan.dataset.plan;
+      planInput.value = selectedPlan;
+      displayPlanDetails(selectedPlan);
+    });
+  });
+
+  vipForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const discordNick = document.getElementById('discordNick').value;
+    const plan = planInput.value;
+
+    if (!discordNick || !plan) {
+      alert('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:3000/usuarios', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name: discordNick, plan }),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        window.location.href = `/pagamento/${result.paymentPage}`;
+      } else {
+        const error = await response.json();
+        alert(`Erro: ${error.message}`);
+      }
+    } catch (error) {
+      console.error('Erro ao enviar dados:', error);
+    }
+  });
+});
+
+const displayPlanDetails = (plan) => {
+  const planDetails = document.getElementById('planDetails');
+  switch (plan) {
+    case 'basic':
+      planDetails.innerHTML = '<p>Detalhes do plano VIP básico...</p>';
+      break;
+    case 'premium':
+      planDetails.innerHTML = '<p>Detalhes do plano VIP premium...</p>';
+      break;
+    case 'ultimate':
+      planDetails.innerHTML = '<p>Detalhes do plano VIP ultimate...</p>';
+      break;
+    default:
+      planDetails.innerHTML = '';
+  }
+};
+
+</script>
 
   </body>
 </html>
