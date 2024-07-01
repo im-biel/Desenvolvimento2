@@ -920,6 +920,7 @@ document.getElementById("vipForm").addEventListener("submit", function (event) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+
   $(document).ready(function () {
     $("#vipForm").submit(function (event) {
       // Impede o envio padrão do formulário
@@ -932,13 +933,13 @@ document.getElementById("vipForm").addEventListener("submit", function (event) {
       // Prepara os dados para enviar como JSON
       const requestData = {
         plan: plan,
-        discordNick: name,
+        discordNick: name, // Certifique-se de que os nomes dos campos correspondem aos esperados no backend
       };
 
       // Envia uma solicitação POST para o backend
       $.ajax({
         type: "POST",
-        url: "http://localhost:3000/api/user/payment",
+        url: "http://localhost:3000/usuarios",
         data: JSON.stringify(requestData),
         contentType: "application/json",
         success: function (response) {
@@ -952,6 +953,8 @@ document.getElementById("vipForm").addEventListener("submit", function (event) {
       });
     });
   });
+
+
 </script>
 
 

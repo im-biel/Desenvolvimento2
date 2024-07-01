@@ -28,14 +28,20 @@ app.use(express.json());
 
 // POST = Criar usuário
 app.post('/usuarios', (req, res) => {
-  const { name } = req.body;
-  const sql = 'INSERT INTO user (name) VALUES (?)';
-  db.query(sql, [name], (err, result) => {
+  const { name , plan } = req.body;
+  const validPlans = ['basic', 'premium', 'ultimate'];
+
+  if (!validPlans.includes(plan)) {
+    return res.status(400).json({ error: 'Invalid plan name' });
+  }
+
+  const sql = 'INSERT INTO user (name, plan) VALUES (?, ?)';
+  db.query(sql, [name, plan], (err, result) => {
     if (err) {
       console.error('Erro ao inserir usuário:', err);
       return res.status(500).json({ error: err.message });
     }
-    res.status(201).json({ id: result.insertId, name });
+    res.status(201).json({ id: result.insertId, name, plan });
   });
 });
 
