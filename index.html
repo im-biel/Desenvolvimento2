@@ -918,6 +918,43 @@ document.getElementById("vipForm").addEventListener("submit", function (event) {
 
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#vipForm").submit(function (event) {
+      // Impede o envio padrão do formulário
+      event.preventDefault();
+
+      // Captura os dados do formulário
+      const plan = $(".vip-plan.active").data("plan");
+      const name = $("#discordNick").val();
+
+      // Prepara os dados para enviar como JSON
+      const requestData = {
+        plan: plan,
+        discordNick: name,
+      };
+
+      // Envia uma solicitação POST para o backend
+      $.ajax({
+        type: "POST",
+        url: "http://localhost:3000/api/user/payment",
+        data: JSON.stringify(requestData),
+        contentType: "application/json",
+        success: function (response) {
+          // Sucesso - redirecionar para a página de pagamento
+          window.location.href = response.redirectUrl;
+        },
+        error: function (error) {
+          // Tratar erros de requisição
+          console.error("Erro ao enviar solicitação:", error);
+        },
+      });
+    });
+  });
+</script>
+
+
 
   </body>
 </html>

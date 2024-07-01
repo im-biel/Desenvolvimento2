@@ -1,116 +1,84 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import { PrismaClient } from '@prisma/client';
+import mysql from 'mysql2';
 
 dotenv.config({ path: './.env' });
 
-const prisma = new PrismaClient();
 const app = express();
+const PORT = process.env.PORT || 3000;
+
+const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+});
+
+db.connect((err) => {
+  if (err) {
+    console.error('Erro ao conectar ao banco de dados MySQL:', err);
+    throw err;
+  }
+  console.log('Conexão bem-sucedida com o banco de dados MySQL');
+});
 
 app.use(express.json());
 
-const PORT = 3000;
-
 // ROTAS
 
-// POST = Criar
-app.post('/usuarios', async (req, res) => {
-  try {
-    const { name, plan } = req.body;
-    const newUser = await prisma.user.create({
-      data: {
-        name,
-        plan
-      }
-    });
-
-    let paymentPage;
-    switch (plan) {
-      case 'basic':
-        paymentPage = 'pagamentovip.html';
-        break;
-      case 'premium':
-        paymentPage = 'pagamentopremium.html';
-        break;
-      case 'ultimate':
-        paymentPage = 'pagamentoLegend.html';
-        break;
-      default:
-        throw new Error('Plano desconhecido');
+// POST = Criar usuário
+app.post('/usuarios', (req, res) => {
+  const { name } = req.body;
+  const sql = 'INSERT INTO user (name) VALUES (?)';
+  db.query(sql, [name], (err, result) => {
+    if (err) {
+      console.error('Erro ao inserir usuário:', err);
+      return res.status(500).json({ error: err.message });
     }
-
-    res.status(201).json({ newUser, paymentPage });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+    res.status(201).json({ id: result.insertId, name });
+  });
 });
 
-// GET = Listar
-app.get('/usuarios', async (req, res) => {
-  try {
-    const { id } = req.query;
-
-    if (id) {
-      const user = await prisma.user.findUnique({
-        where: {
-          id: parseInt(id)
-        }
-      });
-
-      if (!user) {
-        return res.status(404).json({ error: 'Usuário não encontrado' });
-      }
-
-      return res.status(200).json(user);
-    } else {
-      const users = await prisma.user.findMany();
-      return res.status(200).json(users);
+// GET = Listar usuários
+app.get('/usuarios', (req, res) => {
+  const sql = 'SELECT * FROM user';
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.error('Erro ao listar usuários:', err);
+      return res.status(500).json({ error: err.message });
     }
-  } catch (error) {
-    return res.status(500).json({ error: error.message });
-  }
+    res.status(200).json(results);
+  });
 });
 
-// PUT = Atualizar
-app.put('/usuarios/:id', async (req, res) => {
-  try {
-    const { name } = req.body;
-    const { id } = req.params;
-
-    const updatedUser = await prisma.user.update({
-      where: {
-        id: parseInt(id)
-      },
-      data: {
-        name
-      }
-    });
-
-    res.status(200).json(updatedUser);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+// PUT = Atualizar usuário
+app.put('/usuarios/:id', (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+  const sql = 'UPDATE user SET name = ? WHERE id = ?';
+  db.query(sql, [name, id], (err, result) => {
+    if (err) {
+      console.error('Erro ao atualizar usuário:', err);
+      return res.status(500).json({ error: err.message });
+    }
+    res.status(200).json({ id, name });
+  });
 });
 
-// DELETE = Deletar
-app.delete('/usuarios/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    await prisma.user.delete({
-      where: {
-        id: parseInt(id)
-      }
-    });
+// DELETE = Deletar usuário
+app.delete('/usuarios/:id', (req, res) => {
+  const { id } = req.params;
+  const sql = 'DELETE FROM user WHERE id = ?';
+  db.query(sql, [id], (err, result) => {
+    if (err) {
+      console.error('Erro ao deletar usuário:', err);
+      return res.status(500).json({ error: err.message });
+    }
     res.status(204).send();
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+  });
 });
 
 // SERVIDOR
 app.listen(PORT, () => {
   console.log(`O servidor está rodando em http://localhost:${PORT}`);
 });
-
-// Comando prisma
-// npx prisma studio
