@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Frontend com Backend em Node.js e Prisma</title>
+</head>
+<body>
+  <h1>Criar Novo Usuário</h1>
+  <form id="formCreateUser">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+    <label for="plan">Plano:</label>
+    <select id="plan" name="plan" required>
+      <option value="basic">Básico</option>
+      <option value="premium">Premium</option>
+      <option value="ultimate">Ultimate</option>
+    </select>
+    <br><br>
+    <button type="submit">Criar Usuário</button>
+  </form>
+
+  <div id="message"></div>
+
+  <script>
+    document.getElementById('formCreateUser').addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const plan = formData.get('plan');
+
+      try {
+        const response = await fetch('http://localhost:3000', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name, plan })
+        });
+
+        if (!response.ok) {
+          throw new Error('Não foi possível criar o usuário');
+        }
+
+        const data = await response.json();
+        document.getElementById('message').innerText = `Usuário criado com sucesso! Plano: ${data.paymentPage}`;
+      } catch (error) {
+        console.error('Erro ao criar usuário:', error.message);
+        document.getElementById('message').innerText = 'Erro ao criar usuário. Verifique o console para mais detalhes.';
+      }
+    });
+  </script>
+</body>
+</html>
