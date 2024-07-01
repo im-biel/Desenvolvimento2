@@ -27,7 +27,7 @@ app.use(express.json());
 // ROTAS
 
 // POST = Criar usuário
-app.post('/usuarios', (req, res) => {
+app.post('/api/user/payment', (req, res) => {
   const { name , plan } = req.body;
   const validPlans = ['basic', 'premium', 'ultimate'];
 
